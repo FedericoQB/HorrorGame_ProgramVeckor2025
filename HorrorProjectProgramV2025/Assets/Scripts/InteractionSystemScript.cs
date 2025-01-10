@@ -34,7 +34,7 @@ public class InteractionSystemScript : MonoBehaviour
             }
             else if (isADoor == true && isLocked == true)
             {
-                Debug.Log("");
+                Debug.Log("Locked Door");
             }
         }
     }
