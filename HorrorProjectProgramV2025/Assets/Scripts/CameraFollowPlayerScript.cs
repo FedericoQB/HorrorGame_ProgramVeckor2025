@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class CameraFollowPlayerScript : MonoBehaviour
 {
+    public float positiveXBarrier;
+    public float negativeXBarrier;
+    bool isMovable = false;
+
     public GameObject player;
     void Start()
     {
@@ -13,6 +17,28 @@ public class CameraFollowPlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position =  new Vector3(player.transform.position.x, 0.3f, -10);
+        if (transform.position.x < positiveXBarrier && transform.position.x > negativeXBarrier)
+        {
+            transform.position = new Vector3(player.transform.position.x, 0.3f, -10);
+        }
+        else if (transform.position.x > positiveXBarrier)
+        {
+            transform.position = new Vector3(positiveXBarrier - 0.1f, 0.3f, -10);
+        }
+        else if (transform.position.x < negativeXBarrier)
+        {
+            transform.position = new Vector3(negativeXBarrier + 0.1f, 0.3f, -10);
+        }
+
+        /*
+        if (player.transform.position.x <= negativeXBarrier)
+        {
+            transform.position = new Vector3(player.transform.position.x, 0.3f, -10);
+        }
+        else if (player.transform.position.x >= positiveXBarrier)
+        {
+            transform.position = new Vector3(player.transform.position.x, 0.3f, -10);
+        }
+        */
     }
 }
