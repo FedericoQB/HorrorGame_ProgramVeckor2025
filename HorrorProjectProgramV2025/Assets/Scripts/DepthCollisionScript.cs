@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DepthCollisionScript : MonoBehaviour
 {
-    public GameObject targetObject;
+    public GameObject depthPivot;
 
     // Start is called before the first frame update
     void Start()
@@ -15,12 +15,12 @@ public class DepthCollisionScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.y > targetObject.transform.position.y)
+        if (transform.position.y > depthPivot.transform.position.y)
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, 2);
         }
 
-        if (transform.position.y < targetObject.transform.position.y)
+        if (transform.position.y < depthPivot.transform.position.y)
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, 0);
         }

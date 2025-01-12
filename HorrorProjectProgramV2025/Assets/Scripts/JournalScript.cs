@@ -79,6 +79,8 @@ public class JournalScript : MonoBehaviour
     void UpdateJournal()
     {
         GameObject originalGameObject = firstPage;
+
+        // Make it so the number in GetChild(number) changes with the quest scripts, makes organizing easier and easier to access the checkmarks;
         GameObject child = originalGameObject.transform.GetChild(1).gameObject;
 
         Debug.Log("Updated Journal");

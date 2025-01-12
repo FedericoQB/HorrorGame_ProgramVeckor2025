@@ -24,9 +24,6 @@ public class FlashlightDamageScript : MonoBehaviour
 
         if (collision.gameObject.tag == "Enemy")
         {
-            // Testing purpose for Journal Quest System
-            JournalScript.questNumber++;
-
             Destroy(targetEnemy);
         }
     }

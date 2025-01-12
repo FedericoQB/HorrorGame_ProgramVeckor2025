@@ -7,7 +7,8 @@ public class InteractionSystemScript : MonoBehaviour
     bool isPlayerNear = false;
     public bool isAbleToPickUp = false;
     public bool isADoor = false;
-    public bool isLocked = false;
+    public bool isKeyLocked = false;
+    public bool isAbleToTurnOn = false;
 
     // Start is called before the first frame update
     void Start()
@@ -28,13 +29,24 @@ public class InteractionSystemScript : MonoBehaviour
                 Debug.Log("Picked up object");
             }
             
-            if (isADoor == true && isLocked != true)
+            if (isADoor == true && isKeyLocked != true)
             {
                 Debug.Log("Opened Door");
             }
-            else if (isADoor == true && isLocked == true)
+            else if (isADoor == true && isKeyLocked == true)
             {
                 Debug.Log("Locked Door");
+            }
+
+            if (isAbleToTurnOn == true)
+            {
+                if (gameObject.tag == "Generator")
+                {
+                    Debug.Log("Generator is on");
+                    GeneratorScript.isGeneratorOn = true;
+
+                    JournalScript.questNumber++;
+                }
             }
         }
     }
