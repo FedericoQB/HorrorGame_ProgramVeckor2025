@@ -7,6 +7,11 @@ public class QuestSystemScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+    }
+
+    private void OnEnable()
+    {
         UpdateJournal();
     }
 
@@ -18,6 +23,10 @@ public class QuestSystemScript : MonoBehaviour
 
     void UpdateJournal()
     {
+        Debug.Log("Updated Journal");
+        if (JournalScript.questNumber == 2)
+        {
 
+        }
     }
 }

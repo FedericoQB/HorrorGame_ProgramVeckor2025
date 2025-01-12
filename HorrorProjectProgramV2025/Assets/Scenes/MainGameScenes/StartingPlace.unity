@@ -1174,6 +1174,10 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 4.35
       objectReference: {fileID: 0}
+    - target: {fileID: 4056237150338975166, guid: 08548977199c4be44b0bb775956adab0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 12.7
+      objectReference: {fileID: 0}
     - target: {fileID: 4486986488639385711, guid: 08548977199c4be44b0bb775956adab0, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1260,7 +1264,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5032949864425332514, guid: 08548977199c4be44b0bb775956adab0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125693269899730487, guid: 08548977199c4be44b0bb775956adab0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8079827067853692762, guid: 08548977199c4be44b0bb775956adab0, type: 3}
       propertyPath: m_ConstrainProportionsScale

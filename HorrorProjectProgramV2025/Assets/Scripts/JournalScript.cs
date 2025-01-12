@@ -68,20 +68,21 @@ public class JournalScript : MonoBehaviour
     {
         if (number > currentQuestNumber)
         {
-            currentQuestNumber++;
             Debug.Log("Quest Done");
 
-            UpdateJournal();
+            UpdateJournal(currentQuestNumber);
+
+            currentQuestNumber++;
         }
     }
 
     // This is to Update the journal, bring forth the next text and adding a check on the previous quest
-    void UpdateJournal()
+    void UpdateJournal(int questNumber)
     {
         GameObject originalGameObject = firstPage;
 
         // Make it so the number in GetChild(number) changes with the quest scripts, makes organizing easier and easier to access the checkmarks;
-        GameObject child = originalGameObject.transform.GetChild(1).gameObject;
+        GameObject child = originalGameObject.transform.GetChild(questNumber).gameObject;
 
         Debug.Log("Updated Journal");
         child.GetComponent<Image>().sprite = checkedMark;
