@@ -11,6 +11,9 @@ public class InteractionSystemScript : MonoBehaviour
     public bool isAbleToTurnOn = false;
     public bool isInteractableAgain = false;
 
+    public GameObject newRoom;
+    public GameObject OriginalRoom;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,9 +36,10 @@ public class InteractionSystemScript : MonoBehaviour
             if (isADoor == true && isKeyLocked != true)
             {
                 Debug.Log("Opened Door");
-                if (gameObject.tag == "PowerDoor")
+                if (gameObject.tag == "Door")
                 {
-
+                    OriginalRoom.SetActive(false);
+                    newRoom.SetActive(true);
                 }
             }
             else if (isADoor == true && isKeyLocked == true)
