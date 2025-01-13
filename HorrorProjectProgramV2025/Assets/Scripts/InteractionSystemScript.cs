@@ -9,6 +9,7 @@ public class InteractionSystemScript : MonoBehaviour
     public bool isADoor = false;
     public bool isKeyLocked = false;
     public bool isAbleToTurnOn = false;
+    public bool isInteractableAgain = false;
 
     // Start is called before the first frame update
     void Start()
@@ -32,13 +33,17 @@ public class InteractionSystemScript : MonoBehaviour
             if (isADoor == true && isKeyLocked != true)
             {
                 Debug.Log("Opened Door");
+                if (gameObject.tag == "PowerDoor")
+                {
+
+                }
             }
             else if (isADoor == true && isKeyLocked == true)
             {
                 Debug.Log("Locked Door");
             }
 
-            if (isAbleToTurnOn == true)
+            if (isAbleToTurnOn == true && isInteractableAgain == true)
             {
                 if (gameObject.tag == "Generator")
                 {
@@ -46,6 +51,8 @@ public class InteractionSystemScript : MonoBehaviour
                     GeneratorScript.isGeneratorOn = true;
 
                     JournalScript.questNumber++;
+
+                    isInteractableAgain = false;
                 }
             }
         }
