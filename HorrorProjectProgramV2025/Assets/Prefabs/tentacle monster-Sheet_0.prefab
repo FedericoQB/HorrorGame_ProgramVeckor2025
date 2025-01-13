@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4618135815354825076}
   - component: {fileID: 6769052228651991044}
   - component: {fileID: 2733569300246625051}
+  - component: {fileID: 5498646173227444478}
   m_Layer: 0
   m_Name: tentacle monster-Sheet_0
   m_TagString: Enemy
@@ -195,3 +196,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5360948, y: 0.21803844}
   m_EdgeRadius: 0
+--- !u!114 &5498646173227444478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4490547783649853139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96443d324503e4943ae3d7ea086699bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screamSounds:
+  - {fileID: 8300000, guid: 04e692652db58b6498466e8382981268, type: 3}
+  - {fileID: 8300000, guid: 460390041a799414fa973e5099c53871, type: 3}
+  - {fileID: 8300000, guid: b035e481eb729e24ea52f09a8b094318, type: 3}
