@@ -24,7 +24,7 @@ public class FlashlightDamageScript : MonoBehaviour
 
         if (collision.gameObject.tag == "Enemy")
         {
-            Destroy(targetEnemy);
+            Debug.Log("Collided With Enemy");
         }
     }
 }
