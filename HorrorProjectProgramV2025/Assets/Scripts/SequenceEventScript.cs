@@ -30,13 +30,15 @@ public class SequenceEventScript : MonoBehaviour
         {
             isTriggered = true;
             lightSources.SetActive(false);
+
+            SpawnEnemy(5);
+            SpawnEnemy(-5);
         }
     }
 
-    void SpawnEnemy()
+    void SpawnEnemy(float xValue)
     {
-        GameObject newSpawnedObject = Instantiate(enemy, new Vector3(enemySpawnLocation.x, enemySpawnLocation.y, 1), Quaternion.identity);
+        GameObject newSpawnedObject = Instantiate(enemy, new Vector3(xValue, enemySpawnLocation.y, 1), Quaternion.identity);
         newSpawnedObject.transform.parent = gameObject.transform;
-
     }
 }

@@ -1309,7 +1309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightSources: {fileID: 365684996}
-  enemy: {fileID: 0}
+  enemy: {fileID: 4490547783649853139, guid: 0f27d273d3dd2d44b95270de8fa915fd, type: 3}
   enemySpawn: {fileID: 875251016}
 --- !u!4 &707317389
 Transform:
@@ -2015,6 +2015,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 925947259452001664, guid: 300e61b12de24c440902d28efd7da786, type: 3}
+      propertyPath: targetEnemy
+      value: 
+      objectReference: {fileID: 4490547783649853139, guid: 0f27d273d3dd2d44b95270de8fa915fd, type: 3}
     - target: {fileID: 2988713446979784820, guid: 300e61b12de24c440902d28efd7da786, type: 3}
       propertyPath: m_Name
       value: Player

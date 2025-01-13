@@ -25,6 +25,7 @@ public class FlashlightDamageScript : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             Debug.Log("Collided With Enemy");
+            collision.gameObject.SetActive(false);
         }
     }
 }
