@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - InteractableObject
   - Generator
+  - Door
   layers:
   - Default
   - TransparentFX

@@ -7,11 +7,15 @@ public class SequenceEventScript : MonoBehaviour
     bool isTriggered = false;
 
     public GameObject lightSources;
+    public GameObject enemy;
+    public GameObject enemySpawn;
+
+    Vector3 enemySpawnLocation;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        enemySpawnLocation = enemySpawn.transform.position;
     }
 
     // Update is called once per frame
@@ -27,5 +31,10 @@ public class SequenceEventScript : MonoBehaviour
             isTriggered = true;
             lightSources.SetActive(false);
         }
+    }
+
+    void SpawnEnemy()
+    {
+        Instantiate(enemy, enemySpawnLocation, Quaternion.identity);
     }
 }
