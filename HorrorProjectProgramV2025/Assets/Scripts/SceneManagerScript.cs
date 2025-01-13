@@ -27,6 +27,8 @@ public class SceneManagerScript : MonoBehaviour
 
         // Start a coroutine to wait for the cutscene to finish and then load the next scene
         StartCoroutine(WaitForCutsceneToFinish());
+
+        SceneManager.LoadScene(1);
     }
 
     // Coroutine that waits for the cutscene to finish before loading the game scene
