@@ -13,7 +13,7 @@ public class PlayerHealth : MonoBehaviour
 
     public GameObject HealthBarDamageSprite;
     public Image healthBar;
-    public BoxCollider2D collider;
+    public BoxCollider2D playerBoxCollider2D;
 
     private void Start()
     {

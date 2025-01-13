@@ -9,7 +9,7 @@ public class EnemyDammageExample : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            if (collision.GetComponent<PlayerHealth>().collider == collision)
+            if (collision.GetComponent<PlayerHealth>().playerBoxCollider2D == collision)
             collision.GetComponent<PlayerHealth>().damagePlayer(DamagePoints / 100f);
         }
     }
