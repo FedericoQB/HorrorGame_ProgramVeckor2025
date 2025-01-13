@@ -35,6 +35,8 @@ public class SequenceEventScript : MonoBehaviour
 
     void SpawnEnemy()
     {
-        Instantiate(enemy, enemySpawnLocation, Quaternion.identity);
+        GameObject newSpawnedObject = Instantiate(enemy, new Vector3(enemySpawnLocation.x, enemySpawnLocation.y, 1), Quaternion.identity);
+        newSpawnedObject.transform.parent = gameObject.transform;
+
     }
 }
