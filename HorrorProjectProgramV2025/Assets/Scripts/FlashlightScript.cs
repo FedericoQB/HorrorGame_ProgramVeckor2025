@@ -7,20 +7,33 @@ public class FlashlightScript : MonoBehaviour
     public GameObject flashLight;
     public GameObject lightConePivot;
     public GameObject lightCone;
+    public AudioClip toggleSound; // Sound for flashlight toggle
+
+    private AudioSource audioSource; // AudioSource to play the toggle sound
     bool lightOn = false;
     Quaternion flashlightAngle = new Quaternion();
 
     void Start()
     {
         flashLight.SetActive(false);
+
+        // Add or get the AudioSource component
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+
+        // Ensure AudioSource settings are configured
+        audioSource.playOnAwake = false; // Don't play on start
     }
 
     // Update is called once per frame
     void Update()
     {
         // FLASHLIGHT DAMAGE SYSTEM NEEDS TO BE IMPLEMENTED
-        // Angle of Flashlight, a 180 degree angle is based in between 0 - 1 on both the z and w axis
-        
+        // Angle of Flashlight, a 180-degree angle is based in between 0 - 1 on both the z and w axis
+
         if (Input.GetKey(KeyCode.W))
         {
             flashlightAngle = new Quaternion(0, 0, 0, 0);
@@ -37,7 +50,7 @@ public class FlashlightScript : MonoBehaviour
         {
             flashlightAngle = new Quaternion(0, 0, 0.70711f, 0.70711f);
         }
-        
+
         // Activation of Flashlight
         if (Input.GetKeyDown(KeyCode.F) && lightOn != true)
         {
@@ -45,6 +58,9 @@ public class FlashlightScript : MonoBehaviour
             lightConePivot.SetActive(true);
             lightCone.SetActive(true);
             lightOn = true;
+
+            // Play the toggle sound
+            PlayToggleSound();
         }
         else if (Input.GetKeyDown(KeyCode.F) && lightOn == true)
         {
@@ -52,13 +68,21 @@ public class FlashlightScript : MonoBehaviour
             lightConePivot.SetActive(false);
             lightCone.SetActive(false);
             lightOn = false;
+
+            // Play the toggle sound
+            PlayToggleSound();
         }
 
         flashLight.transform.rotation = flashlightAngle;
         lightConePivot.transform.rotation = flashlightAngle;
+    }
 
-        
-
-        //Debug.Log(angle);
+    // Method to play the toggle sound
+    private void PlayToggleSound()
+    {
+        if (toggleSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(toggleSound);
+        }
     }
 }

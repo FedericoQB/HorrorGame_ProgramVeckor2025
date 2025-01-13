@@ -748,7 +748,7 @@ MonoBehaviour:
   footstepClips:
   - {fileID: 8300000, guid: e9bd3a294b8e615449b14e3426c61f7b, type: 3}
   stepInterval: 0.5
-  minMovementSpeed: 0.1
+  minMovementSpeed: 0.05
 --- !u!82 &1633714830
 AudioSource:
   m_ObjectHideFlags: 0
