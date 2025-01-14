@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
 
 public class EnemyDamageExample : MonoBehaviour
 {
     public float DamagePoints = 20f;
+    public float timeBetweenDoingSomething = 5f;
+    public float timeWhenWeNextDoSomething;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -16,6 +19,14 @@ public class EnemyDamageExample : MonoBehaviour
             {
                 playerHealth.damagePlayer(DamagePoints / 100f);
             }
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (timeWhenWeNextDoSomething <= Time.time)
+        {
+            
         }
     }
 }

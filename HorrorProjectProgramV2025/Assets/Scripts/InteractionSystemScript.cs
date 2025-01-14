@@ -29,7 +29,11 @@ public class InteractionSystemScript : MonoBehaviour
 
             if (isAbleToPickUp == true)
             {
-                PickUpObject();
+                if (gameObject.tag == "Note")
+                {
+                    PickUpObject("Note");
+                }
+                
                 Debug.Log("Picked up object");
             }
             
@@ -80,9 +84,13 @@ public class InteractionSystemScript : MonoBehaviour
         }
     }
 
-    void PickUpObject()
+    void PickUpObject(string obj)
     {
-        // Temporary Function
-        Destroy(gameObject);
+        if (obj == "Note")
+        {
+            JournalScript.notes++;
+            Destroy(gameObject);
+        }
+        
     }
 }
