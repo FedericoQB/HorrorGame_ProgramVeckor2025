@@ -22,26 +22,10 @@ public class SceneManagerScript : MonoBehaviour
     // Method to start the game, plays the cutscene first
     public void StartGame()
     {
-        // Start the cutscene
-        cutsceneDirector.Play();
-
-        // Start a coroutine to wait for the cutscene to finish and then load the next scene
-        StartCoroutine(WaitForCutsceneToFinish());
-
+    
         SceneManager.LoadScene(1);
     }
 
-    // Coroutine that waits for the cutscene to finish before loading the game scene
-    IEnumerator WaitForCutsceneToFinish()
-    {
-        // Wait for the cutscene to finish (based on the duration of the cutscene)
-        yield return new WaitForSeconds((float)cutsceneDirector.duration);
-
-        // After the cutscene ends, load the game scene (Scene index 1 in this case)
-        SceneManager.LoadScene(1);
-    }
-
-    // Method to exit the application
     public void EndApplication()
     {
         // Quit the application (works in built game, not in editor)

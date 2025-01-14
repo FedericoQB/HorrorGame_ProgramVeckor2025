@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenuScene.unity
     guid: 0378e6f2858c6ed4eb415c573dbadd1f
   - enabled: 1
+    path: Assets/Scenes/FebascoScene.unity
+    guid: ad6202d6448e9354292629fd7fbf1ec0
+  - enabled: 1
     path: Assets/Scenes/MainGameScenes/StartingPlace.unity
     guid: 0f0699b8d68bf1f488966733029f67e5
   m_configObjects: {}
