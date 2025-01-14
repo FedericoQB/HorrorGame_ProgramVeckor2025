@@ -20,12 +20,11 @@ public class FlashlightDamageScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Trigger Collided");
+        //Debug.Log("Trigger Collided");
 
         if (collision.gameObject.tag == "Enemy")
         {
-            Debug.Log("Collided With Enemy");
-            collision.gameObject.SetActive(false);
+            //Debug.Log("Collided With Enemy");
         }
     }
 
@@ -33,7 +32,7 @@ public class FlashlightDamageScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            Debug.Log("Collided With Enemy");
+            //Debug.Log("Collided With Enemy");
             GameObject enemy = collision.gameObject;
             enemy.GetComponent<EnemyAI>().action = "Runaway Player";
             enemy.GetComponent<EnemyAI>().timeWhenWeNextDoSomething = Time.time + enemy.GetComponent<EnemyAI>().timeBetweenDoingSomething;
