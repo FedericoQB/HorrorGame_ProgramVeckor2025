@@ -79,7 +79,7 @@ public class EnemyAI : MonoBehaviour
             Vector2 direction = randomTarget - (Vector2)transform.position;
 
             RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, Mathf.Infinity);
-            if (hit.collider != null && hit.collider.CompareTag("Player") && hit.collider != hit.collider.GetComponent<PlayerHealth>().playerBoxCollider2D)
+            if (hit.collider != null && hit.collider.CompareTag("Player"))
             {
                 action = "Chase Player";
             }
@@ -117,13 +117,9 @@ public class EnemyAI : MonoBehaviour
                 {
                     action = "Chase Player";
                 }
-                else if (hit.collider != null && !hit.collider.CompareTag("Player"))
+                else if ((hit.collider != null && !hit.collider.CompareTag("Player")) || hit.collider == null)
                 {
                     action = "Idle";
-                }
-                else if (hit.collider == null)
-                {
-                    timeWhenWeNextDoSomething = Time.time + timeBetweenDoingSomething;
                 }
             }
             float distance = Vector2.Distance(targets[0].transform.position, transform.position);
