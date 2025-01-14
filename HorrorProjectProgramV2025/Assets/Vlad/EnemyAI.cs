@@ -79,7 +79,7 @@ public class EnemyAI : MonoBehaviour
             Vector2 direction = randomTarget - (Vector2)transform.position;
 
             RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, Mathf.Infinity);
-            if (hit.collider != null && hit.collider.CompareTag("Player"))
+            if (hit.collider != null && hit.collider.CompareTag("Player") && hit.collider != hit.collider.GetComponent<PlayerHealth>().playerBoxCollider2D)
             {
                 action = "Chase Player";
             }
