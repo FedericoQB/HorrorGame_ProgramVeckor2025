@@ -3,8 +3,9 @@ using UnityEngine;
 public class FootstepSound : MonoBehaviour
 {
     public AudioClip[] footstepClips;  // Array of footstep sounds
-    public float stepInterval = 0.5f; // Time between steps
+    public float baseStepInterval = 0.5f; // Base time between steps
     public float minMovementSpeed = 0.1f; // Minimum speed to play footsteps
+    public float speedMultiplier = 0.2f; // Factor to adjust step interval with speed
 
     private AudioSource audioSource;
     private float stepTimer;
@@ -13,7 +14,7 @@ public class FootstepSound : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        stepTimer = stepInterval;
+        stepTimer = baseStepInterval;
     }
 
     void Update()
@@ -27,19 +28,23 @@ public class FootstepSound : MonoBehaviour
 
         if (isMoving)
         {
+            // Adjust the step interval based on speed
+            float dynamicStepInterval = baseStepInterval - (speed * speedMultiplier);
+            dynamicStepInterval = Mathf.Clamp(dynamicStepInterval, 0.1f, baseStepInterval); // Prevent too small intervals
+
             stepTimer -= Time.deltaTime;
 
             // Play a footstep if the timer runs out
             if (stepTimer <= 0f)
             {
                 PlayFootstep();
-                stepTimer = stepInterval;
+                stepTimer = dynamicStepInterval; // Reset timer with adjusted interval
             }
         }
         else
         {
-            // Reset timer and stop the sound if not moving
-            stepTimer = stepInterval;
+            // Reset timer if not moving
+            stepTimer = baseStepInterval;
             audioSource.Stop();
         }
     }
