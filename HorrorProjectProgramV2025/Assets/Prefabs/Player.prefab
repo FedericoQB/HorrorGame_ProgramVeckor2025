@@ -49,6 +49,7 @@ GameObject:
   - component: {fileID: 9003027314878624660}
   - component: {fileID: 8467152838632477711}
   - component: {fileID: -7617299446767624120}
+  - component: {fileID: -3581920425014784007}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -408,6 +409,27 @@ MonoBehaviour:
   HealthBarDamageSprite: {fileID: 0}
   healthBar: {fileID: 0}
   playerBoxCollider2D: {fileID: 0}
+--- !u!95 &-3581920425014784007
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2988713446979784820}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bc0c9939eb6bfc9449d2a23e8478ade2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3854680321395752015
 GameObject:
   m_ObjectHideFlags: 0
