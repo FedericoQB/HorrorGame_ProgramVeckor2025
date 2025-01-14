@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2733569300246625051}
   - component: {fileID: 5498646173227444478}
   - component: {fileID: 8573395952405387784}
+  - component: {fileID: -5350753987724307526}
   m_Layer: 0
   m_Name: tentacle monster-Sheet_0
   m_TagString: Enemy
@@ -118,7 +119,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4490547783649853139}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c8e87644c85d44479191d40a40d54d7, type: 3}
   m_Name: 
@@ -311,3 +312,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-5350753987724307526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4490547783649853139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78f144b1946eb674c9ae3232445feba1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action: 
+  speed: 4
+  speedOffset: 1
+  timeBetweenDoingSomething: 5
+  timeWhenWeNextDoSomething: 0
