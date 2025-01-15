@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 97352730}
   - component: {fileID: 97352729}
   m_Layer: 5
-  m_Name: Transmission
+  m_Name: Transition Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
