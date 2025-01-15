@@ -2196,7 +2196,7 @@ MonoBehaviour:
   isADoor: 0
   isLocked: 0
   isAbleToTurnOn: 1
-  isInteractableAgain: 0
+  isInteractableAgain: 1
   completesQuest: 0
   newRoom: {fileID: 0}
   OriginalRoom: {fileID: 0}

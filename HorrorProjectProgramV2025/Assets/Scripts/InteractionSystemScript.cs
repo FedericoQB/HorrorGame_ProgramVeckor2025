@@ -76,12 +76,6 @@ public class InteractionSystemScript : MonoBehaviour
 
                     isInteractableAgain = false;
                 }
-
-                if (gameObject.tag == "Computer")
-                {
-                    ComputerFunction();
-                }
-
             }
         }
     }
@@ -117,10 +111,5 @@ public class InteractionSystemScript : MonoBehaviour
     void AddToJournal()
     {
         JournalScript.questNumber++;
-    }
-
-    void ComputerFunction()
-    {
-        ComputerScript.isOn = true;
     }
 }

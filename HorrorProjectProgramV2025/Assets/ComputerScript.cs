@@ -22,6 +22,11 @@ public class ComputerScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.tag == "Player")
+        {
+            isOn = true;
+        }
+
         if (isOn == true)
         {
             computerCanvas.SetActive(true);
