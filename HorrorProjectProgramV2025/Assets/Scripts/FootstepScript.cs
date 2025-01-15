@@ -3,49 +3,49 @@ using UnityEngine;
 public class FootstepSound : MonoBehaviour
 {
     public AudioClip[] footstepClips;  // Array of footstep sounds
-    public float baseStepInterval = 0.5f; // Base time between steps
-    public float minMovementSpeed = 0.1f; // Minimum speed to play footsteps
-    public float speedMultiplier = 0.2f; // Factor to adjust step interval with speed
+    public float baseStepInterval = 0.5f; // Default time between steps
+    public float speedMultiplier = 1.0f; // Adjust interval based on speed
+    public float minMovementSpeed = 0.1f; // Minimum speed to trigger footsteps
 
     private AudioSource audioSource;
     private float stepTimer;
-    private bool isMoving;
+    private float stepInterval;
+    private CharacterController characterController;
 
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        stepTimer = baseStepInterval;
+        characterController = GetComponent<CharacterController>();
+        stepInterval = baseStepInterval;
+        stepTimer = stepInterval;
     }
 
     void Update()
     {
         // Get player's velocity or movement input
-        Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        float speed = movement.magnitude;
+        Vector3 velocity = characterController ? characterController.velocity : new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        float speed = velocity.magnitude;
 
-        // Check if the player is moving
-        isMoving = speed > minMovementSpeed;
+        // Check if the player is moving above the minimum speed
+        bool isMoving = speed > minMovementSpeed;
 
         if (isMoving)
         {
-            // Adjust the step interval based on speed
-            float dynamicStepInterval = baseStepInterval - (speed * speedMultiplier);
-            dynamicStepInterval = Mathf.Clamp(dynamicStepInterval, 0.1f, baseStepInterval); // Prevent too small intervals
+            // Dynamically adjust step interval based on player speed
+            stepInterval = baseStepInterval / Mathf.Clamp(speed * speedMultiplier, 1f, 3f);
 
             stepTimer -= Time.deltaTime;
 
-            // Play a footstep if the timer runs out
             if (stepTimer <= 0f)
             {
                 PlayFootstep();
-                stepTimer = dynamicStepInterval; // Reset timer with adjusted interval
+                stepTimer = stepInterval;
             }
         }
         else
         {
-            // Reset timer if not moving
-            stepTimer = baseStepInterval;
-            audioSource.Stop();
+            // Reset timer when not moving
+            stepTimer = stepInterval;
         }
     }
 
