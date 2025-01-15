@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.UIElements;
 using Image = UnityEngine.UI.Image;
 
 public class JournalScript : MonoBehaviour
@@ -14,21 +13,21 @@ public class JournalScript : MonoBehaviour
 
     public Sprite checkedMark;
 
+    public AudioClip flipSound;  // Add this to assign your flip sound
+    private AudioSource audioSource;  // Add an AudioSource component
+
     bool journalOpen = false;
 
     public static int questNumber = 1;
     int currentQuestNumber = 1;
 
     public static int notes = 0;
-    
 
-    // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Tab) && journalOpen != true)
@@ -46,11 +45,13 @@ public class JournalScript : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.X) && firstPage.activeInHierarchy == true)
             {
+                PlayFlipSound();  // Play sound when flipping
                 firstPage.SetActive(false);
                 secondPage.SetActive(true);
             }
             if (Input.GetKeyDown(KeyCode.Z) && secondPage.activeInHierarchy == true)
             {
+                PlayFlipSound();  // Play sound when flipping
                 firstPage.SetActive(true);
                 secondPage.SetActive(false);
             }
@@ -63,10 +64,16 @@ public class JournalScript : MonoBehaviour
 
         CheckQuestNumber(questNumber);
         UpdateJournal();
-
     }
 
-    // This is to check which quest the player is on, if it is bigger than the previous number, the quest has been completed and will update the journal
+    void PlayFlipSound()
+    {
+        if (audioSource != null && flipSound != null)
+        {
+            audioSource.PlayOneShot(flipSound);
+        }
+    }
+
     void CheckQuestNumber(int number)
     {
         if (number > currentQuestNumber)
@@ -79,12 +86,10 @@ public class JournalScript : MonoBehaviour
         }
     }
 
-    // This is to Update the journal, bring forth the next text and adding a check on the previous quest
     void UpdateQuest(int questNumber)
     {
         GameObject originalGameObject = firstPage;
 
-        // Make it so the number in GetChild(number) changes with the quest scripts, makes organizing easier and easier to access the checkmarks;
         GameObject child = originalGameObject.transform.GetChild(questNumber - 1).gameObject;
 
         Debug.Log("Updated Quests");

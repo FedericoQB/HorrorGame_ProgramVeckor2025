@@ -10,6 +10,7 @@ public class InteractionSystemScript : MonoBehaviour
     public bool isLocked = false;
     public bool isAbleToTurnOn = false;
     public bool isInteractableAgain = false;
+    public bool completesQuest = false;
 
     public GameObject newRoom;
     public GameObject OriginalRoom;
@@ -35,6 +36,10 @@ public class InteractionSystemScript : MonoBehaviour
                 }
                 
                 Debug.Log("Picked up object");
+                if (completesQuest == true)
+                {
+                    AddToJournal();
+                }
             }
             
             if (isADoor == true && isLocked != true)
@@ -44,11 +49,20 @@ public class InteractionSystemScript : MonoBehaviour
                 {
                     OriginalRoom.SetActive(false);
                     newRoom.SetActive(true);
+
+                    if (completesQuest == true)
+                    {
+                        AddToJournal();
+                    }
                 }
             }
             else if (isADoor == true && isLocked == true)
             {
                 Debug.Log("Locked Door");
+                if (completesQuest == true)
+                {
+                    AddToJournal();
+                }
             }
 
             if (isAbleToTurnOn == true && isInteractableAgain == true)
@@ -92,5 +106,10 @@ public class InteractionSystemScript : MonoBehaviour
             Destroy(gameObject);
         }
         
+    }
+
+    void AddToJournal()
+    {
+        JournalScript.questNumber++;
     }
 }

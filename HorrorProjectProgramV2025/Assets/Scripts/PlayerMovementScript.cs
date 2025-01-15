@@ -27,12 +27,16 @@ public class PlayerMovementScript : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             rb.velocity = new Vector2(0, 1) * speed;
-            anim.Play("NGuardWalkAnim");
+            anim.Play("NGuardBackWalk");
+            conePivot.transform.position = transform.position;
+            lightPivot.transform.position = transform.position;
         }
         if (Input.GetKey(KeyCode.S))
         {
             rb.velocity = new Vector2(0, -1) * speed;
-            anim.Play("NGuardWalkAnim");
+            anim.Play("NGuardFrontWalkAnim");
+            conePivot.transform.position = new Vector3(transform.position.x, transform.position.y, 1);
+            lightPivot.transform.position = new Vector3(transform.position.x, transform.position.y, 1);
         }
         if (Input.GetKey(KeyCode.D))
         {

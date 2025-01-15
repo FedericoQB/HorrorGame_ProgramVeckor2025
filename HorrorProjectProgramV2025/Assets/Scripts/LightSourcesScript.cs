@@ -13,7 +13,7 @@ public class LightSourcesScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        lightSources.SetActive(false);
     }
 
     // Update is called once per frame
@@ -23,7 +23,7 @@ public class LightSourcesScript : MonoBehaviour
         {
             lightSources.SetActive(true);
         }
-        else
+        else if (newRoom.active == true && originalRoom.active != true && isStillActive == false)
         {
             lightSources.SetActive(false);
         }
