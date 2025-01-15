@@ -18,15 +18,21 @@ public class EnemyDamageExample : MonoBehaviour
             if (playerHealth != null && playerHealth.playerBoxCollider2D == collision)
             {
                 playerHealth.damagePlayer(DamagePoints / 100f);
+                timeWhenWeNextDoSomething = Time.time + timeBetweenDoingSomething;
             }
         }
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (timeWhenWeNextDoSomething <= Time.time)
+        if (collision.CompareTag("Player"))
         {
-            
+            PlayerHealth playerHealth = collision.GetComponent<PlayerHealth>();
+            if (timeWhenWeNextDoSomething <= Time.time)
+            {
+                timeWhenWeNextDoSomething = Time.time + timeBetweenDoingSomething;
+                playerHealth.damagePlayer(DamagePoints / 100f);
+            }
         }
     }
 }
