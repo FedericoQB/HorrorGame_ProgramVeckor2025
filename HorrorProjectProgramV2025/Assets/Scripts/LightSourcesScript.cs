@@ -19,7 +19,7 @@ public class LightSourcesScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (newRoom.active == true && originalRoom.active != true && isStillActive == true)
+        if (newRoom.activeSelf == true && originalRoom.activeSelf != true && isStillActive == true)
         {
             lightSources.SetActive(true);
         }
