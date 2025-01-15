@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 using UnityEditor.XR;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Transition : MonoBehaviour
 {
@@ -16,7 +17,9 @@ public class Transition : MonoBehaviour
     public bool InAction = false;
 
     [Range(1, 60)]
-    public int speedInFrames = 0; 
+    public int speedInFrames = 0;
+
+    public int ToSceneById = 0;
 
     public Image img;
     public int fps = 1;
@@ -43,10 +46,13 @@ public class Transition : MonoBehaviour
 
     }
 
-    private void OnMouseDown()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        timeInAction = 0f;
-        InAction = true;
+        if (collision.CompareTag("Player"))
+        {
+            InAction = true;
+            timeInAction = 0f;
+        }
     }
 
     void fillLeftToRight()
@@ -54,13 +60,14 @@ public class Transition : MonoBehaviour
         if (timeInAction < ActionTime)
         {
             img.fillAmount = timeInAction;
-            timeInAction += 1f / fps;
+            timeInAction += (float)speedInFrames / (float)fps;
         }
         else
         {
             InAction = false;
             img.fillAmount = 1f;
             timeInAction = 0f;
+            SceneManager.LoadScene(ToSceneById);
         }
     }
 }
