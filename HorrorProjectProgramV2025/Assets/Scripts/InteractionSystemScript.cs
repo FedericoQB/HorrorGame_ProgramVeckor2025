@@ -7,7 +7,7 @@ public class InteractionSystemScript : MonoBehaviour
     bool isPlayerNear = false;
     public bool isAbleToPickUp = false;
     public bool isADoor = false;
-    public bool isKeyLocked = false;
+    public bool isLocked = false;
     public bool isAbleToTurnOn = false;
     public bool isInteractableAgain = false;
 
@@ -37,7 +37,7 @@ public class InteractionSystemScript : MonoBehaviour
                 Debug.Log("Picked up object");
             }
             
-            if (isADoor == true && isKeyLocked != true)
+            if (isADoor == true && isLocked != true)
             {
                 Debug.Log("Opened Door");
                 if (gameObject.tag == "Door")
@@ -46,7 +46,7 @@ public class InteractionSystemScript : MonoBehaviour
                     newRoom.SetActive(true);
                 }
             }
-            else if (isADoor == true && isKeyLocked == true)
+            else if (isADoor == true && isLocked == true)
             {
                 Debug.Log("Locked Door");
             }

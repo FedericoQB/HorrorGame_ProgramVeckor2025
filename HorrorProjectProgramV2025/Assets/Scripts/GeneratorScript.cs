@@ -11,6 +11,7 @@ public class GeneratorScript : MonoBehaviour
     public GameObject lightSourceRoom;
 
     public GameObject lockedPowerDoor;
+    public GameObject unlockDoor;
     public GameObject sequenceCollider;
 
     public AudioClip poweredUpSound; // Sound to play when generator is powered up
@@ -37,6 +38,8 @@ public class GeneratorScript : MonoBehaviour
             lightSource.SetActive(true);
             lightSourceRoom.SetActive(true);
             sequenceCollider.SetActive(true);
+
+            unlockDoor.GetComponent<InteractionSystemScript>().isLocked = false;
 
             // Play powered-up sound if it's assigned
             if (poweredUpSound != null && !audioSource.isPlaying)
