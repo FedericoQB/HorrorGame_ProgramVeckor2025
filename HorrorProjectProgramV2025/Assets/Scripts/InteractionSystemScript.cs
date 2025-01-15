@@ -59,10 +59,6 @@ public class InteractionSystemScript : MonoBehaviour
             else if (isADoor == true && isLocked == true)
             {
                 Debug.Log("Locked Door");
-                if (completesQuest == true)
-                {
-                    AddToJournal();
-                }
             }
 
             if (isAbleToTurnOn == true && isInteractableAgain == true)
