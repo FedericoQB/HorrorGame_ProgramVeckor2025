@@ -24,11 +24,14 @@ public class Transition : MonoBehaviour
     public Image img;
     public int fps = 1;
 
+
+
     private void Start()
     {
         action = new Dictionary<string, Action>
         {
             { "Fill left to right", fillLeftToRight},
+            { "Empty right to left", emptyRightToLeft},
         };
     }
 
@@ -48,8 +51,9 @@ public class Transition : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && !InAction)
         {
+            functionName = "Fill left to right";
             InAction = true;
             timeInAction = 0f;
         }
@@ -57,6 +61,7 @@ public class Transition : MonoBehaviour
 
     void fillLeftToRight()
     {
+        img.fillOrigin = 0;
         if (timeInAction < ActionTime)
         {
             img.fillAmount = timeInAction;
@@ -68,6 +73,22 @@ public class Transition : MonoBehaviour
             img.fillAmount = 1f;
             timeInAction = 0f;
             SceneManager.LoadScene(ToSceneById);
+        }
+    }
+
+    void emptyRightToLeft()
+    {
+        img.fillOrigin = 1;
+        if (timeInAction < ActionTime)
+        {
+            img.fillAmount = ActionTime - timeInAction;
+            timeInAction += (float)speedInFrames / (float)fps;
+        }
+        else
+        {
+            InAction = false;
+            img.fillAmount = 0f;
+            timeInAction = 0f;
         }
     }
 }
