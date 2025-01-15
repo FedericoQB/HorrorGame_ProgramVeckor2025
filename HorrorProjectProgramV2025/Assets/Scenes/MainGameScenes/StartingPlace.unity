@@ -1360,9 +1360,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.52193165}
+  m_Offset: {x: 0, y: -1.014979}
   serializedVersion: 2
-  m_Radius: 1.1065693
+  m_Radius: 1.5996166
 --- !u!114 &411281811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1424,7 +1424,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d385c8e57f5c8384c9b4127f0071d574, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1444,9 +1444,9 @@ Transform:
   m_GameObject: {fileID: 411281809}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.72, y: -0.42, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 6.81, y: -0.49, z: 0}
+  m_LocalScale: {x: 0.59, y: 0.59, z: 0.59}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2109,7 +2109,6 @@ GameObject:
   - component: {fileID: 981148076}
   - component: {fileID: 981148078}
   - component: {fileID: 981148079}
-  - component: {fileID: 981148080}
   m_Layer: 0
   m_Name: ComputerInteraction
   m_TagString: Computer
@@ -2180,26 +2179,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   computerCanvas: {fileID: 1718562835}
---- !u!114 &981148080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 981148075}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b806da336899f9f42821237c88263905, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isAbleToPickUp: 0
-  isADoor: 0
-  isLocked: 0
-  isAbleToTurnOn: 1
-  isInteractableAgain: 1
-  completesQuest: 0
-  newRoom: {fileID: 0}
-  OriginalRoom: {fileID: 0}
 --- !u!1 &983710723
 GameObject:
   m_ObjectHideFlags: 0
@@ -4221,7 +4200,6 @@ GameObject:
   - component: {fileID: 2045890400}
   - component: {fileID: 2045890399}
   - component: {fileID: 2045890402}
-  - component: {fileID: 2045890403}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4395,22 +4373,6 @@ MonoBehaviour:
   newRoom: {fileID: 1246041801}
   lightSources: {fileID: 365684996}
   isStillActive: 0
---- !u!114 &2045890403
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2045890395}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ddbd1fe79d7ff641a5019819726ffc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  originalRoom: {fileID: 973724796}
-  newRoom: {fileID: 1731662686}
-  lightSources: {fileID: 365684996}
-  isStillActive: 1
 --- !u!1 &2053074455
 GameObject:
   m_ObjectHideFlags: 0
