@@ -29,15 +29,18 @@ public class ComputerScript : MonoBehaviour
 
         if (isOn == true)
         {
+            computerCanvas = GameObject.Find("UI Canvas").transform.GetChild(1).gameObject;
             computerCanvas.SetActive(true);
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (isOn == true)
+        if (isOn == true && collision.CompareTag("Player"))
         {
+            computerCanvas = GameObject.Find("UI Canvas").transform.GetChild(1).gameObject;
             computerCanvas.SetActive(false);
+            isOn = false;
         }
     }
 }

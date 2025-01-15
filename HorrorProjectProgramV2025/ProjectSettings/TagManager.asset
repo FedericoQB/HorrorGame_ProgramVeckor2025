@@ -11,6 +11,8 @@ TagManager:
   - Door
   - Note
   - Computer
+  - DontDestroy
+  - depthPivot
   layers:
   - Default
   - TransparentFX
