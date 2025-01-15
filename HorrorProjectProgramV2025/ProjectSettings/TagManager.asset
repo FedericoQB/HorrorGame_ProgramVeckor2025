@@ -10,6 +10,7 @@ TagManager:
   - Generator
   - Door
   - Note
+  - Computer
   layers:
   - Default
   - TransparentFX
