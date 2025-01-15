@@ -31,7 +31,6 @@ public class FlashlightScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // FLASHLIGHT DAMAGE SYSTEM NEEDS TO BE IMPLEMENTED
         // Angle of Flashlight, a 180-degree angle is based in between 0 - 1 on both the z and w axis
 
         if (Input.GetKey(KeyCode.W))

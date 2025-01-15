@@ -6,6 +6,7 @@ public class LightSourcesScript : MonoBehaviour
 {
     public GameObject originalRoom;
     public GameObject newRoom;
+    public GameObject lightSources;
 
     public bool isStillActive = false;
 
@@ -20,11 +21,11 @@ public class LightSourcesScript : MonoBehaviour
     {
         if (newRoom.active == true && originalRoom.active != true && isStillActive == true)
         {
-            gameObject.SetActive(true);
+            lightSources.SetActive(true);
         }
         else
         {
-            gameObject.SetActive(false);
+            lightSources.SetActive(false);
         }
     }
 }
