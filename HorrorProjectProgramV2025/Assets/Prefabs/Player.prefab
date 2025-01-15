@@ -168,6 +168,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  spaceBetweenPlayerAndFlashlight: 0
+  conePivot: {fileID: 0}
+  lightPivot: {fileID: 0}
 --- !u!61 &6818946871648286605
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -390,8 +393,8 @@ MonoBehaviour:
   footstepClips:
   - {fileID: 8300000, guid: e9bd3a294b8e615449b14e3426c61f7b, type: 3}
   baseStepInterval: 0.6
-  minMovementSpeed: 0.01
-  speedMultiplier: 0.1
+  speedMultiplier: 0.5
+  minMovementSpeed: 0.1
 --- !u!114 &-7617299446767624120
 MonoBehaviour:
   m_ObjectHideFlags: 0
