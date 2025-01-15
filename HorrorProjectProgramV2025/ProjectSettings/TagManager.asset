@@ -11,6 +11,7 @@ TagManager:
   - Door
   - Note
   - Computer
+  - Chain
   layers:
   - Default
   - TransparentFX

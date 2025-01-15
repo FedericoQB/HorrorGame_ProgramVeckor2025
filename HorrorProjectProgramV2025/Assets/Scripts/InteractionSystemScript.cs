@@ -11,6 +11,7 @@ public class InteractionSystemScript : MonoBehaviour
     public bool isAbleToTurnOn = false;
     public bool isInteractableAgain = false;
     public bool completesQuest = false;
+    public static bool hasBolts = false;
 
     public GameObject newRoom;
     public GameObject OriginalRoom;
@@ -72,6 +73,14 @@ public class InteractionSystemScript : MonoBehaviour
 
                     isInteractableAgain = false;
                 }
+            }
+
+
+            if (gameObject.tag == "Chain" && hasBolts == true)
+            {
+                HeartScript.amountOfTimesUsedBolts++;
+                Debug.Log("Bolt Used");
+                Destroy(gameObject);
             }
         }
     }

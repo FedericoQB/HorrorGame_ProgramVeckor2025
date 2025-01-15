@@ -50,6 +50,7 @@ GameObject:
   - component: {fileID: 8467152838632477711}
   - component: {fileID: -7617299446767624120}
   - component: {fileID: -3581920425014784007}
+  - component: {fileID: 3792026733441123547}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -168,9 +169,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  spaceBetweenPlayerAndFlashlight: 0
-  conePivot: {fileID: 0}
-  lightPivot: {fileID: 0}
+  spaceBetweenPlayerAndFlashlight: 0.45
+  conePivot: {fileID: 5433030959978795978}
+  lightPivot: {fileID: 3854680321395752015}
 --- !u!61 &6818946871648286605
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -433,6 +434,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3792026733441123547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2988713446979784820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f11ca814b9fe384ba39d55900b80d8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3854680321395752015
 GameObject:
   m_ObjectHideFlags: 0
