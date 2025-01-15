@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainGameScenes/StartingPlace.unity
     guid: 0f0699b8d68bf1f488966733029f67e5
+  - enabled: 1
+    path: Assets/Scenes/MainGameScenes/Hallway2.unity
+    guid: 7d0b6d37c1430cb4ea51d44d057de021
   m_configObjects: {}
