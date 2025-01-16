@@ -3,26 +3,31 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Video;
 
-public class SceneManagerScript : MonoBehaviour
+public class CutsceneManager : MonoBehaviour
 {
-    public VideoPlayer videoPlayer; // Reference to the VideoPlayer component
-    public string gameSceneName; // Name of the scene to load after the video
+    public VideoPlayer videoPlayer;  // The VideoPlayer component
+    public string gameSceneName;    // Name of the scene to load after the cutscene
 
-    public void StartGame()
+    private bool cutsceneStarted = false;
+
+    // Call this function when the Start button is pressed
+    public void PlayCutsceneAndStartGame()
     {
-        // Start playing the video
+        if (cutsceneStarted) return; // Prevent double triggers
+        cutsceneStarted = true;
+
         if (videoPlayer != null)
         {
             videoPlayer.Play();
-            StartCoroutine(WaitForVideoToEnd());
+            StartCoroutine(WaitForCutsceneToEnd());
         }
         else
         {
-            Debug.LogError("No VideoPlayer assigned!");
+            Debug.LogError("VideoPlayer not assigned!");
         }
     }
 
-    private IEnumerator WaitForVideoToEnd()
+    private IEnumerator WaitForCutsceneToEnd()
     {
         // Wait until the video finishes playing
         while (videoPlayer.isPlaying)
@@ -30,7 +35,7 @@ public class SceneManagerScript : MonoBehaviour
             yield return null;
         }
 
-        // Load the game scene
+        // Load the main game scene
         SceneManager.LoadScene(gameSceneName);
     }
 }
