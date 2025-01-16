@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 8573395952405387784}
   - component: {fileID: -5350753987724307526}
   - component: {fileID: 3696190468369529879}
+  - component: {fileID: 3441026497350981100}
   m_Layer: 0
   m_Name: tentacle monster-Sheet_0
   m_TagString: Enemy
@@ -125,7 +126,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c8e87644c85d44479191d40a40d54d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetObject: {fileID: 2988713446979784820, guid: 300e61b12de24c440902d28efd7da786, type: 3}
   speed: 2
 --- !u!50 &6769052228651991044
 Rigidbody2D:
@@ -375,3 +375,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.68282115, y: 0.22901034}
   m_EdgeRadius: 0
+--- !u!114 &3441026497350981100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4490547783649853139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 672dfdbdc26011e4aae268ed2b0c76c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamagePoints: 20
+  timeBetweenDoingSomething: 2
+  timeWhenWeNextDoSomething: 0
