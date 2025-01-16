@@ -1468,7 +1468,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6239212437372827651, guid: 514d6d9692ed58a48a6836ad97176d5a, type: 3}
       propertyPath: cutsceneDuration
-      value: 1
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 7106275459541698843, guid: 514d6d9692ed58a48a6836ad97176d5a, type: 3}
       propertyPath: m_Pivot.x
