@@ -8,6 +8,9 @@ public class EnemySpawnScript : MonoBehaviour
     public GameObject enemy2;
 
     bool hasSpawned = false;
+    public bool spawnActive = false;
+
+    public int amountOfEnemies;
 
     // Start is called before the first frame update
     void Start()
@@ -25,12 +28,18 @@ public class EnemySpawnScript : MonoBehaviour
 
             hasSpawned = true;
         }
+
+        if (spawnActive == true)
+        {
+            SpawnEnemy(enemy1);
+            spawnActive = false;
+        }
     }
 
     void SpawnEnemy(GameObject enemy)
     {
 
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < amountOfEnemies; i++)
         {
             GameObject enemyChild = Instantiate(enemy, new Vector3(Random.Range(-12f, 11f), transform.position.y, transform.position.z), Quaternion.identity);
             enemyChild.transform.parent = gameObject.transform;
