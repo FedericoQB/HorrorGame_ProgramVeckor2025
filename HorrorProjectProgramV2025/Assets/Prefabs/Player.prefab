@@ -75,6 +75,7 @@ Transform:
   - {fileID: 2611834362010467687}
   - {fileID: 4582932529721403114}
   - {fileID: 7616013447765379557}
+  - {fileID: 2383544046657536078}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5447361698790029805
@@ -386,7 +387,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2988713446979784820}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b3c1d61c836c2b84cad11233339bae36, type: 3}
   m_Name: 
@@ -395,7 +396,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e9bd3a294b8e615449b14e3426c61f7b, type: 3}
   baseStepInterval: 0.6
   speedMultiplier: 0.5
-  minMovementSpeed: 0.1
+  minMovementSpeed: 0.5
 --- !u!114 &-7617299446767624120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -752,3 +753,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4247105940085771658}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7017385725168761442
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2383544046657536078}
+  - component: {fileID: 369384847758892955}
+  m_Layer: 0
+  m_Name: SceneChecker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2383544046657536078
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7017385725168761442}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.012444766, z: 0}
+  m_LocalScale: {x: 0.4672897, y: 0.4672897, z: 0.4672897}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4247105940085771658}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &369384847758892955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7017385725168761442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75225e9f3a1472145997885e766273d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneID: 0
+  DoorsInHallway2: []
+  DoorsInHallway3: []
