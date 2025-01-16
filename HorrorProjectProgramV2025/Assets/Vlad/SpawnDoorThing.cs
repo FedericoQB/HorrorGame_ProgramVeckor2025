@@ -8,9 +8,12 @@ public class SpawnDoorThing : MonoBehaviour
 {
     public int SceneID;
 
+    public GameObject[] DoorsInHallway1;
+    public bool ifDoorsInHallway1 = true;
     public GameObject[] DoorsInHallway2;
     public bool ifDoorsInHallway2 = true;
     public GameObject[] DoorsInHallway3;
+    public bool ifDoorsInHallway3 = true;
 
     private void Update()
     {

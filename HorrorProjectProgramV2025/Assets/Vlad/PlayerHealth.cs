@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class PlayerHealth : MonoBehaviour
@@ -31,6 +32,7 @@ public class PlayerHealth : MonoBehaviour
             health = 0f;
             instantDeath = false;
             print("Nah bro, u ded!");
+            SceneManager.LoadScene(0);
         }
         healthBar.fillAmount = health;
     }
@@ -51,6 +53,7 @@ public class PlayerHealth : MonoBehaviour
         {
             health = 0f;
             print("Nah bro, u ded!");
+            SceneManager.LoadScene(0);
         }
     }
 
