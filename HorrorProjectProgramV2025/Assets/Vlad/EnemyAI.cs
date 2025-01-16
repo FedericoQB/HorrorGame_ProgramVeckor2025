@@ -46,6 +46,7 @@ public class EnemyAI : MonoBehaviour
     public void Idle()
     {
         gameObject.GetComponent<Renderer>().enabled = true;
+        gameObject.GetComponent<EnemyDamageExample>().enabled = true;
 
         GameObject[] targets = GameObject.FindGameObjectsWithTag("Player");
         if (targets.Length > 0)
@@ -95,6 +96,7 @@ public class EnemyAI : MonoBehaviour
     public void ChasePlayer()
     {
         gameObject.GetComponent<Renderer>().enabled = true;
+        gameObject.GetComponent<EnemyDamageExample>().enabled = true;
         GameObject[] targets = GameObject.FindGameObjectsWithTag("Player");
         if (targets.Length > 0)
         {
@@ -106,6 +108,7 @@ public class EnemyAI : MonoBehaviour
     public void RunawayPlayer()
     {
         gameObject.GetComponent<Renderer>().enabled = false;
+        gameObject.GetComponent<EnemyDamageExample>().enabled = false;
         GameObject[] targets = GameObject.FindGameObjectsWithTag("Player");
         if (targets.Length > 0)
         {

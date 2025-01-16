@@ -1454,9 +1454,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: RawImage
       objectReference: {fileID: 0}
+    - target: {fileID: 4860441136111747914, guid: 514d6d9692ed58a48a6836ad97176d5a, type: 3}
+      propertyPath: gameSceneName
+      value: LoadStull
+      objectReference: {fileID: 0}
     - target: {fileID: 4921176579522790349, guid: 514d6d9692ed58a48a6836ad97176d5a, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921176579522790349, guid: 514d6d9692ed58a48a6836ad97176d5a, type: 3}
+      propertyPath: gameSceneName
+      value: LoadStull
       objectReference: {fileID: 0}
     - target: {fileID: 6239212437372827651, guid: 514d6d9692ed58a48a6836ad97176d5a, type: 3}
       propertyPath: m_Enabled
@@ -1550,6 +1558,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7628150783872614225, guid: 514d6d9692ed58a48a6836ad97176d5a, type: 3}
+      propertyPath: m_VideoClip
+      value: 
+      objectReference: {fileID: 32900000, guid: 771518590d696d34eb3a4d10ed3c981b, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
