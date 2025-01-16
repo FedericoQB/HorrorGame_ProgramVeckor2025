@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class InteractionSystemScript : MonoBehaviour
 {
@@ -86,6 +87,10 @@ public class InteractionSystemScript : MonoBehaviour
             else if (isADoor == true && isLocked == true)
             {
                 Debug.Log("Locked Door");
+                if (HeartScript.isDead == true && gameObject.tag == "Exit")
+                {
+                    SceneManager.LoadScene(0);
+                }
             }
 
             if (isAbleToTurnOn == true && isInteractableAgain == true)
