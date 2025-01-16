@@ -30,7 +30,7 @@ public class SpawnDoorThing : MonoBehaviour
             ifDoorsInHallway2 = false;
             for (int i = 0; i < 3; i++)
             {
-                GameObject random = DoorsInHallway2[(int)Random.Range(0, DoorsInHallway2.Count - 1)];
+                GameObject random = DoorsInHallway2[(int)Random.Range(0, DoorsInHallway2.Count)];
                 Doors2.Add(random);
                 DoorsInHallway2.Remove(random);
             }
@@ -41,7 +41,8 @@ public class SpawnDoorThing : MonoBehaviour
             ifDoorsInHallway1 = false;
             for (int i = 0; i < 3; i++)
             {
-                GameObject random = DoorsInHallway1[(int)Random.Range(0, DoorsInHallway1.Count - 1)];
+                GameObject random = DoorsInHallway1[(int)Random.Range(0, DoorsInHallway1.Count)];
+                print(DoorsInHallway1.Count);
                 Doors1.Add(random);
                 DoorsInHallway1.Remove(random);
             }
@@ -52,7 +53,7 @@ public class SpawnDoorThing : MonoBehaviour
             ifDoorsInHallway3 = false;
             for (int i = 0; i < 3; i++)
             {
-                GameObject random = DoorsInHallway3[(int)Random.Range(0, DoorsInHallway3.Count - 1)];
+                GameObject random = DoorsInHallway3[(int)Random.Range(0, DoorsInHallway3.Count)];
                 Doors3.Add(random);
                 DoorsInHallway3.Remove(random);
             }
