@@ -13,6 +13,9 @@ TagManager:
   - Note
   - Computer
   - depthPivot
+  - Key
+  - HeartRoomExit
+  - ChainKey
   layers:
   - Default
   - TransparentFX
