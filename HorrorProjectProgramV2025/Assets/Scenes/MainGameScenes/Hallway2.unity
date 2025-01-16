@@ -406,7 +406,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   positiveXBarrier: 5.6
   negativeXBarrier: -5.9
-  player: {fileID: 0}
 --- !u!114 &168924889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -675,6 +674,54 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.18962462, y: 0.04252523}
   m_EdgeRadius: 0
+--- !u!1 &804786288
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 804786290}
+  - component: {fileID: 804786289}
+  m_Layer: 0
+  m_Name: EnemySpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &804786289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 804786288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07eed26e0a741f7428bca8938b0d4032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy1: {fileID: 4490547783649853139, guid: 0f27d273d3dd2d44b95270de8fa915fd, type: 3}
+  enemy2: {fileID: 4490547783649853139, guid: 0f27d273d3dd2d44b95270de8fa915fd, type: 3}
+  spawnActive: 1
+  amountOfEnemies: 3
+--- !u!4 &804786290
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 804786288}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.57, y: -2.63, z: -0.048176497}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1135620040
 GameObject:
   m_ObjectHideFlags: 0
@@ -1870,3 +1917,4 @@ SceneRoots:
   - {fileID: 1870314478}
   - {fileID: 2141172273}
   - {fileID: 2095462179}
+  - {fileID: 804786290}
