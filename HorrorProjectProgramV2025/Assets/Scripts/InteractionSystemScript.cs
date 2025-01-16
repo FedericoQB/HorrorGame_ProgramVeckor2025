@@ -11,7 +11,7 @@ public class InteractionSystemScript : MonoBehaviour
     public bool isAbleToTurnOn = false;
     public bool isInteractableAgain = false;
     public bool completesQuest = false;
-    public static bool hasBolts = false;
+    public static bool hasKey = false;
 
     public GameObject newRoom;
     public GameObject OriginalRoom;
@@ -35,6 +35,12 @@ public class InteractionSystemScript : MonoBehaviour
                 {
                     PickUpObject("Note");
                 }
+
+                if (gameObject.tag == "Key")
+                {
+                    PickUpObject("Key");
+                    Debug.Log("Picked up key");
+                }
                 
                 Debug.Log("Picked up object");
                 if (completesQuest == true)
@@ -56,6 +62,13 @@ public class InteractionSystemScript : MonoBehaviour
                         AddToJournal();
                     }
                 }
+
+                if (gameObject.tag == "HeartRoomExit")
+                {
+                    HeartScript.isDead = true;
+                    OriginalRoom.SetActive(false);
+                    newRoom.SetActive(true);
+                }
             }
             else if (isADoor == true && isLocked == true)
             {
@@ -76,9 +89,10 @@ public class InteractionSystemScript : MonoBehaviour
             }
 
 
-            if (gameObject.tag == "Chain" && hasBolts == true)
+            if (gameObject.tag == "Chain" && hasKey == true)
             {
                 HeartScript.amountOfTimesUsedBolts++;
+                Debug.Log(HeartScript.amountOfTimesUsedBolts);
                 Debug.Log("Bolt Used");
                 Destroy(gameObject);
             }
@@ -108,6 +122,12 @@ public class InteractionSystemScript : MonoBehaviour
         if (obj == "Note")
         {
             JournalScript.notes++;
+            Destroy(gameObject);
+        }
+
+        if (obj == "Key")
+        {
+            InteractionSystemScript.hasKey = true;
             Destroy(gameObject);
         }
         

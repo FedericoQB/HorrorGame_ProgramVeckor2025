@@ -7,6 +7,7 @@ public class HeartScript : MonoBehaviour
     Animator animator;
 
     public static int amountOfTimesUsedBolts = 0;
+    public static bool isDead = false;
 
     // Start is called before the first frame update
     void Start()
@@ -17,9 +18,13 @@ public class HeartScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (amountOfTimesUsedBolts >= 2)
+        if (amountOfTimesUsedBolts >= 2 && isDead != true)
         {
             animator.Play("HeartDieAnim");
+        }
+        else if(isDead == true)
+        {
+            animator.Play("HeartDeathIdleAnim");
         }
     }
 }

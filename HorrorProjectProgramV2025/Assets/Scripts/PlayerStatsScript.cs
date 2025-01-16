@@ -17,6 +17,6 @@ public class PlayerStatsScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        InteractionSystemScript.hasBolts = hasCutterBolts;
+
     }
 }
