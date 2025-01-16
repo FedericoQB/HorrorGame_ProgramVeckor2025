@@ -6,7 +6,7 @@ using UnityEngine.Networking;
 public class EnemyMovementScript : MonoBehaviour
 {
     Rigidbody2D rb;
-    public GameObject targetObject;
+    GameObject targetObject;
     public float speed;
 
 
@@ -14,6 +14,8 @@ public class EnemyMovementScript : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        targetObject = GameObject.FindWithTag("Player");
     }
 
     void Update()
@@ -21,5 +23,13 @@ public class EnemyMovementScript : MonoBehaviour
         Vector2 direction = targetObject.transform.position - transform.position;
 
         rb.velocity = (Vector3.Normalize(direction) * speed);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            PlayerHealth.instantDeath = true;
+        }
     }
 }

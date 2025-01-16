@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: 7480040498073602506}
   - component: {fileID: 4929199863066428574}
   - component: {fileID: 4911510037255199181}
-  - component: {fileID: 5618795272200211410}
   - component: {fileID: 4937371556305857257}
+  - component: {fileID: -7413874138008006708}
+  - component: {fileID: 7686927160209285316}
   m_Layer: 0
   m_Name: Bloodtrailmonster_0
   m_TagString: Untagged
@@ -201,23 +202,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b035e481eb729e24ea52f09a8b094318, type: 3}
   minTimeBetweenScreams: 1
   maxTimeBetweenScreams: 3
---- !u!114 &5618795272200211410
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 451118680651548156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78f144b1946eb674c9ae3232445feba1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  action: 
-  speed: 4
-  speedOffset: 1
-  timeBetweenDoingSomething: 5
-  timeWhenWeNextDoSomething: 0
 --- !u!82 &4937371556305857257
 AudioSource:
   m_ObjectHideFlags: 0
@@ -314,3 +298,52 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-7413874138008006708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451118680651548156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c8e87644c85d44479191d40a40d54d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetObject: {fileID: 2988713446979784820, guid: 300e61b12de24c440902d28efd7da786, type: 3}
+  speed: 4
+--- !u!58 &7686927160209285316
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451118680651548156}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5

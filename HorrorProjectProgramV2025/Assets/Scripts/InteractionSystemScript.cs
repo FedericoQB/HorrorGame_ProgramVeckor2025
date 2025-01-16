@@ -11,6 +11,7 @@ public class InteractionSystemScript : MonoBehaviour
     public bool isAbleToTurnOn = false;
     public bool isInteractableAgain = false;
     public bool completesQuest = false;
+    public static bool hasHeartKey = false;
     public static bool hasKey = false;
 
     public GameObject newRoom;
@@ -36,16 +37,23 @@ public class InteractionSystemScript : MonoBehaviour
                     PickUpObject("Note");
                 }
 
+                if (gameObject.tag == "ChainKey")
+                {
+                    PickUpObject("ChainKey");
+                    Debug.Log("Picked up key");
+                }
+
                 if (gameObject.tag == "Key")
                 {
                     PickUpObject("Key");
                     Debug.Log("Picked up key");
                 }
-                
+
                 Debug.Log("Picked up object");
                 if (completesQuest == true)
                 {
                     AddToJournal();
+                    completesQuest = false;
                 }
             }
             
@@ -60,12 +68,17 @@ public class InteractionSystemScript : MonoBehaviour
                     if (completesQuest == true)
                     {
                         AddToJournal();
+                        completesQuest = false;
                     }
                 }
 
                 if (gameObject.tag == "HeartRoomExit")
                 {
-                    HeartScript.isDead = true;
+                    if (HeartScript.hasPlayed == true)
+                    {
+                        HeartScript.isDead = true;
+                        AddToJournal();
+                    }
                     OriginalRoom.SetActive(false);
                     newRoom.SetActive(true);
                 }
@@ -82,14 +95,14 @@ public class InteractionSystemScript : MonoBehaviour
                     Debug.Log("Generator is on");
                     GeneratorScript.isGeneratorOn = true;
 
-                    JournalScript.questNumber++;
+                    AddToJournal();
 
                     isInteractableAgain = false;
                 }
             }
 
 
-            if (gameObject.tag == "Chain" && hasKey == true)
+            if (gameObject.tag == "Chain" && hasHeartKey == true)
             {
                 HeartScript.amountOfTimesUsedBolts++;
                 Debug.Log(HeartScript.amountOfTimesUsedBolts);
@@ -125,12 +138,18 @@ public class InteractionSystemScript : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (obj == "Key")
+        if (obj == "ChainKey")
         {
-            InteractionSystemScript.hasKey = true;
+            InteractionSystemScript.hasHeartKey = true;
             Destroy(gameObject);
         }
-        
+
+        if (obj == "Key")
+        {
+            PlayerStatsScript.hasKey = true;
+            Destroy(gameObject);
+        }
+
     }
 
     void AddToJournal()

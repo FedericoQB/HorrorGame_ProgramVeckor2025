@@ -10,6 +10,7 @@ public class PlayerHealth : MonoBehaviour
     [Range(0.0f, 1.0f)]
     public float health = 1f;
     public float maxHealth = 1f;
+    public static bool instantDeath = false;
 
     public GameObject HealthBarDamageSprite;
     public Image healthBar;
@@ -27,9 +28,10 @@ public class PlayerHealth : MonoBehaviour
 
     private void Update()
     {
-        if (health <= 0)
+        if (health <= 0 || instantDeath == true)
         {
             health = 0f;
+            instantDeath = false;
             print("Nah bro, u ded!");
         }
         healthBar.fillAmount = health;
