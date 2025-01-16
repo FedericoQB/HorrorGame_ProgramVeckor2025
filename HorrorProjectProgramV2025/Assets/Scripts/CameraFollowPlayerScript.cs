@@ -20,6 +20,14 @@ public class CameraFollowPlayerScript : MonoBehaviour
         {
             isMovable = true;
         }
+        else if (player.transform.position.x > 0)
+        {
+            transform.position = new Vector3(positiveXBarrier, 0.3f, -10);
+        }
+        else if (player.transform.position.x < 0)
+        {
+            transform.position = new Vector3(negativeXBarrier, 0.3f, -10);
+        }
     }
 
     // Update is called once per frame
