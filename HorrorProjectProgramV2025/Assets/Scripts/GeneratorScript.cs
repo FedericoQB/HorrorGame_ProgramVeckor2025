@@ -10,6 +10,9 @@ public class GeneratorScript : MonoBehaviour
     public GameObject lightSource;
     public GameObject lightSourceRoom;
 
+    public GameObject generatorLamp;
+    public GameObject generatorLampState2;
+
     public GameObject lockedPowerDoor;
     public GameObject unlockDoor;
     public GameObject sequenceCollider;
@@ -38,6 +41,8 @@ public class GeneratorScript : MonoBehaviour
             lightSource.SetActive(true);
             lightSourceRoom.SetActive(true);
             sequenceCollider.SetActive(true);
+            generatorLamp.SetActive(false);
+            generatorLampState2.SetActive(true);
 
             unlockDoor.GetComponent<InteractionSystemScript>().isLocked = false;
 

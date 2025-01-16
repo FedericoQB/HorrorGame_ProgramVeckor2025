@@ -17,6 +17,8 @@ public class PlayerHealth : MonoBehaviour
 
     private void Start()
     {
+        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(HealthBarDamageSprite.gameObject.transform.parent.gameObject);
         if (HealthBarDamageSprite == null)
         {
             Debug.LogWarning("No GameObject HealthBarDamageSprite was attached to PlayerHealth script");

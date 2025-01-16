@@ -11,6 +11,11 @@ public class CameraFollowPlayerScript : MonoBehaviour
     public GameObject player;
     void Start()
     {
+        if (player == null)
+        {
+            player = GameObject.FindGameObjectsWithTag("Player")[0];
+        }
+
         if (player.transform.position.x > negativeXBarrier && player.transform.position.x < positiveXBarrier)
         {
             isMovable = true;
@@ -20,6 +25,10 @@ public class CameraFollowPlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (player == null)
+        {
+            player = GameObject.FindGameObjectsWithTag("Player")[0];
+        }
         if (isMovable == true)
         {
             transform.position = new Vector3(player.transform.position.x, 0.3f, -10);

@@ -23,7 +23,7 @@ public class LightSourcesScript : MonoBehaviour
         {
             lightSources.SetActive(true);
         }
-        else if (newRoom.active == true && originalRoom.active != true && isStillActive == false)
+        else if (newRoom.activeSelf == true && originalRoom.activeSelf != true && isStillActive == false)
         {
             lightSources.SetActive(false);
         }
