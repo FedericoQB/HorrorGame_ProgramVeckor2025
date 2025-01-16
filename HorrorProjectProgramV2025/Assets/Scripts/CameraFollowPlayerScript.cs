@@ -8,7 +8,7 @@ public class CameraFollowPlayerScript : MonoBehaviour
     public float negativeXBarrier;
     bool isMovable = false;
 
-    public GameObject player;
+    GameObject player;
     void Start()
     {
         if (player == null)

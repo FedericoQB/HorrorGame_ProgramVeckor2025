@@ -627,7 +627,7 @@ MonoBehaviour:
   ActionTime: 1
   InAction: 0
   speedInFrames: 1
-  ToSceneById: 4
+  ToSceneById: 5
   img: {fileID: 1334661244}
   fps: 1
 --- !u!61 &453366219
@@ -1278,7 +1278,7 @@ GameObject:
   - component: {fileID: 1269676365}
   m_Layer: 0
   m_Name: Exit
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1349,7 +1349,7 @@ MonoBehaviour:
   isADoor: 1
   isLocked: 0
   isAbleToTurnOn: 0
-  isInteractableAgain: 1
+  isInteractableAgain: 0
   completesQuest: 0
   newRoom: {fileID: 77748378}
   OriginalRoom: {fileID: 2095462178}

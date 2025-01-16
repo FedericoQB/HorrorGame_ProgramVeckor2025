@@ -64,6 +64,12 @@ public class JournalScript : MonoBehaviour
 
         CheckQuestNumber(questNumber);
         UpdateJournal();
+
+        if (PlayerHealth.healthStat <= 0)
+        {
+            questNumber = 1;
+            currentQuestNumber = 1;
+        }
     }
 
     void PlayFlipSound()
@@ -104,4 +110,6 @@ public class JournalScript : MonoBehaviour
             notes--;
         }
     }
+
+
 }

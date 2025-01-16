@@ -10,6 +10,7 @@ public class PlayerHealth : MonoBehaviour
 {
     [Range(0.0f, 1.0f)]
     public float health = 1f;
+    public static float healthStat = 1f;
     public float maxHealth = 1f;
     public static bool instantDeath = false;
 
@@ -27,6 +28,8 @@ public class PlayerHealth : MonoBehaviour
 
     private void Update()
     {
+        healthStat = health;
+
         if (health <= 0 || instantDeath == true)
         {
             health = 0f;
