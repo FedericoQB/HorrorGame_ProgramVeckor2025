@@ -3,9 +3,10 @@ using UnityEngine.SceneManagement;
 
 public class CutsceneTimer : MonoBehaviour
 {
-    public float cutsceneDuration = 10f;  // Duration of the cutscene in seconds
-    public string gameSceneName = "GameScene"; // The scene to load after the cutscene ends
-    private bool hasCutsceneStarted = false;
+    public float cutsceneDuration = 10f; // Duration of the cutscene in seconds
+    public string gameSceneName = "GameScene"; // Name of the game scene to load
+
+    private bool isCutscenePlaying = false;
     private float timer;
 
     void Start()
@@ -15,18 +16,17 @@ public class CutsceneTimer : MonoBehaviour
 
     void Update()
     {
-        // Wait for the start button press (replace "Space" with your input if needed)
-        if (!hasCutsceneStarted && Input.GetKeyDown(KeyCode.Space)) // You can change this to any key or button
+        // Start cutscene when the space key is pressed
+        if (!isCutscenePlaying && Input.GetKeyDown(KeyCode.Space))
         {
             StartCutscene();
         }
 
-        if (hasCutsceneStarted)
+        // Countdown and check if the cutscene timer has expired
+        if (isCutscenePlaying)
         {
-            // Countdown the timer while the cutscene is playing
             timer -= Time.deltaTime;
 
-            // If the timer reaches zero, transition to the game scene
             if (timer <= 0f)
             {
                 LoadGameScene();
@@ -36,12 +36,13 @@ public class CutsceneTimer : MonoBehaviour
 
     void StartCutscene()
     {
-        hasCutsceneStarted = true;
+        isCutscenePlaying = true;
+        Debug.Log("Cutscene started. Timer: " + cutsceneDuration);
     }
 
     void LoadGameScene()
     {
-        // Load the next scene after the cutscene ends
+        Debug.Log("Cutscene ended. Loading game scene...");
         SceneManager.LoadScene(gameSceneName);
     }
 }
