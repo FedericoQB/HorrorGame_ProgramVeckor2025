@@ -13,14 +13,15 @@ public class PlayerMovementScript : MonoBehaviour
 
     public GameObject conePivot;
     public GameObject lightPivot;
+    private string direction;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        anim.Play("NGuardIdleAnim");
     }
 
-    // Update is called once per frame
     void Update()
     {
         rb.velocity = new Vector2();
@@ -31,6 +32,7 @@ public class PlayerMovementScript : MonoBehaviour
             anim.Play("NGuardBackWalk");
             conePivot.transform.position = transform.position;
             lightPivot.transform.position = transform.position;
+            direction = "back";
         }
         if (Input.GetKey(KeyCode.S))
         {
@@ -38,6 +40,7 @@ public class PlayerMovementScript : MonoBehaviour
             anim.Play("NGuardFrontWalkAnim");
             conePivot.transform.position = new Vector3(transform.position.x, transform.position.y, 1);
             lightPivot.transform.position = new Vector3(transform.position.x, transform.position.y, 1);
+            direction = "forward";
         }
         if (Input.GetKey(KeyCode.D))
         {
@@ -46,6 +49,7 @@ public class PlayerMovementScript : MonoBehaviour
 
             conePivot.transform.position = new Vector3((transform.position.x + spaceBetweenPlayerAndFlashlight), transform.position.y, 1);
             lightPivot.transform.position = new Vector3((transform.position.x + spaceBetweenPlayerAndFlashlight), transform.position.y, 1);
+            direction = "right";
         }
         if (Input.GetKey(KeyCode.A))
         {
@@ -54,16 +58,37 @@ public class PlayerMovementScript : MonoBehaviour
 
             conePivot.transform.position = new Vector3((transform.position.x - spaceBetweenPlayerAndFlashlight), transform.position.y, 1);
             lightPivot.transform.position = new Vector3((transform.position.x - spaceBetweenPlayerAndFlashlight), transform.position.y, 1);
+            direction = "left";
         }
 
         if (rb.velocity == new Vector2())
         {
-            anim.Play("NGuardIdleAnim");
+            if (direction == "left")
+            {
+                anim.Play("NGuardIdleLeftAnim");
 
-            conePivot.transform.position = new Vector3((transform.position.x + 0.6f), transform.position.y, 1);
-            lightPivot.transform.position = new Vector3((transform.position.x + 0.6f), transform.position.y, 1);
+                conePivot.transform.position = new Vector3((transform.position.x - spaceBetweenPlayerAndFlashlight), transform.position.y, 1);
+                lightPivot.transform.position = new Vector3((transform.position.x - spaceBetweenPlayerAndFlashlight), transform.position.y, 1);
+            }
+            else if (direction == "right")
+            {
+                anim.Play("NGuardIdleAnim");
 
-            lightPivot.transform.rotation = new Quaternion(0, 0, 0.70711f, -0.70711f);
+                conePivot.transform.position = new Vector3((transform.position.x + spaceBetweenPlayerAndFlashlight), transform.position.y, 1);
+                lightPivot.transform.position = new Vector3((transform.position.x + spaceBetweenPlayerAndFlashlight), transform.position.y, 1);
+            }
+            else if (direction == "back")
+            {
+                anim.Play("NGuardIdleBackAnim");
+                conePivot.transform.position = transform.position;
+                lightPivot.transform.position = transform.position;
+            }
+            else if (direction == "forward")
+            {
+                anim.Play("NGuardIdleFrontAnim");
+                conePivot.transform.position = new Vector3(transform.position.x, transform.position.y, 1);
+                lightPivot.transform.position = new Vector3(transform.position.x, transform.position.y, 1);
+            }
         }
 
     }
