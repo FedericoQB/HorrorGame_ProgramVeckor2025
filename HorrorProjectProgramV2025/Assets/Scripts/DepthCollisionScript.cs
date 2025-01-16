@@ -22,7 +22,7 @@ public class DepthCollisionScript : MonoBehaviour
         }
         else
         {
-            depthPivot = GameObject.FindGameObjectWithTag("depthPivot");
+            depthPivot = GameObject.Find("DepthPivot");
         }
     }
 }
