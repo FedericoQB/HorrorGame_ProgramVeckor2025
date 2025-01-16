@@ -15,7 +15,7 @@ public class SpawnDoorThing : MonoBehaviour
     private void Update()
     {
         SceneID = SceneManager.GetActiveScene().buildIndex;
-        if (SceneID == 4)
+        if (SceneID == 4 && ifDoorsInHallway2)
         {
             DoorsInHallway2 = GameObject.FindGameObjectsWithTag("Door");
             ifDoorsInHallway2 = false;
