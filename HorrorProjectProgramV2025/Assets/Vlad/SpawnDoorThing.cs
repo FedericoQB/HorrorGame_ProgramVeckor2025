@@ -9,54 +9,64 @@ using UnityEngine.SceneManagement;
 public class SpawnDoorThing : MonoBehaviour
 {
     public int SceneID;
+    public GameObject DoorFloor1;
+    public GameObject Door1Floor2;
+    public GameObject Door2Floor2;
+    public GameObject Door3Floor2;
+    public GameObject Door1Floor3;
+    public GameObject Door2Floor3;
+    public GameObject Door3Floor3;
 
-    public List<GameObject> DoorsInHallway1;
-    public bool ifDoorsInHallway1 = true;
-    public List<GameObject> DoorsInHallway2;
-    public bool ifDoorsInHallway2 = true;
-    public List<GameObject> DoorsInHallway3;
-    public bool ifDoorsInHallway3 = true;
+    public bool f1;
+    public bool f2;
+    public bool f3;
 
-    public List<GameObject> Doors1;
-    public List<GameObject> Doors2;
-    public List<GameObject> Doors3;
+    public List<Vector2> SpawnPoints1;
+    public List<Vector2> SpawnPoints2;
+    public List<Vector2> SpawnPoints3;
 
     private void Update()
     {
         SceneID = SceneManager.GetActiveScene().buildIndex;
-        if (SceneID == 4 && ifDoorsInHallway2)
+
+        if (SceneID == 3 && f1 && DoorFloor1 != null)
         {
-            DoorsInHallway2 = GameObject.FindGameObjectsWithTag("Door").ToList();
-            ifDoorsInHallway2 = false;
-            for (int i = 0; i < 3; i++)
-            {
-                GameObject random = DoorsInHallway2[(int)Random.Range(0, DoorsInHallway2.Count)];
-                Doors2.Add(random);
-                DoorsInHallway2.Remove(random);
-            }
+            DoorFloor1.transform.position = SpawnPoints1[(int)Random.Range(0f, (float)SpawnPoints1.Count - 1f)];
+            f1 = false;
         }
-        if (SceneID == 3 && ifDoorsInHallway1)
+
+        if (SceneID == 4 && f2)
         {
-            DoorsInHallway1 = GameObject.FindGameObjectsWithTag("Door").ToList();
-            ifDoorsInHallway1 = false;
-            for (int i = 0; i < 3; i++)
-            {
-                GameObject random = DoorsInHallway1[(int)Random.Range(0, DoorsInHallway1.Count)];
-                print(DoorsInHallway1.Count);
-                Doors1.Add(random);
-                DoorsInHallway1.Remove(random);
-            }
+            int id = (int)Random.Range(0f, (float)SpawnPoints2.Count - 1f);
+            Door1Floor2.transform.position = SpawnPoints2[id];
+            SpawnPoints2.RemoveAt(id);
+
+            id = (int)Random.Range(0f, (float)SpawnPoints2.Count - 1f);
+            Door2Floor2.transform.position = SpawnPoints2[id];
+            SpawnPoints2.RemoveAt(id);
+
+            id = (int)Random.Range(0f, (float)SpawnPoints2.Count - 1f);
+            Door3Floor2.transform.position = SpawnPoints2[id];
+            SpawnPoints2.RemoveAt(id);
+
+            f2 = false;
         }
-        if (SceneID == 5 && ifDoorsInHallway2)
+
+        if (SceneID == 5 && f3)
         {
-            DoorsInHallway3 = GameObject.FindGameObjectsWithTag("Door").ToList();
-            ifDoorsInHallway3 = false;
-            for (int i = 0; i < 3; i++)
-            {
-                GameObject random = DoorsInHallway3[(int)Random.Range(0, DoorsInHallway3.Count)];
-                Doors3.Add(random);
-                DoorsInHallway3.Remove(random);
-            }
+            int id = (int)Random.Range(0f, (float)SpawnPoints3.Count - 1f);
+            Door1Floor3.transform.position = SpawnPoints3[id];
+            SpawnPoints3.RemoveAt(id);
+
+            id = (int)Random.Range(0f, (float)SpawnPoints3.Count - 1f);
+            Door2Floor3.transform.position = SpawnPoints3[id];
+            SpawnPoints2.RemoveAt(id);
+
+            id = (int)Random.Range(0f, (float)SpawnPoints3.Count - 1f);
+            Door3Floor3.transform.position = SpawnPoints3[id];
+            SpawnPoints3.RemoveAt(id);
+
+            f3 = false;
         }
     }
 }
