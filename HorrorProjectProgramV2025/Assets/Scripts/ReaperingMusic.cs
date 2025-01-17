@@ -1,32 +1,39 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class ToggleableLightActivator : MonoBehaviour
+[RequireComponent(typeof(AudioSource))]
+public class ReusableMusicTrigger : MonoBehaviour
 {
-    public Light lightToToggle; // The light to toggle
-    public AudioClip toggleSound; // The sound to play on toggle
-    private AudioSource audioSource; // The audio source to play the sound
+    private AudioSource audioSource;
+    public AudioClip musicClip; // The music clip to play
+    public bool playOnEnter = true; // If true, music will play when entering the trigger
+    public bool stopOnExit = false; // If true, music will stop when exiting the trigger
 
     void Start()
     {
-        if (lightToToggle == null)
-        {
-            Debug.LogError("No light assigned!");
-            return;
-        }
-
-        // Add and configure an AudioSource if none exists
-        audioSource = gameObject.AddComponent<AudioSource>();
-        audioSource.clip = toggleSound;
-        audioSource.playOnAwake = false;
+        audioSource = GetComponent<AudioSource>();
+        audioSource.loop = false; // You can set this to true if you want looping music
+        audioSource.playOnAwake = false; // Prevent music from starting automatically
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && playOnEnter)
         {
-            lightToToggle.enabled = !lightToToggle.enabled; // Toggle the light
-            if (toggleSound != null)
-                audioSource.Play(); // Play the toggle sound
+            if (musicClip != null)
+            {
+                audioSource.clip = musicClip;
+                audioSource.Play();
+            }
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player") && stopOnExit)
+        {
+            audioSource.Stop();
         }
     }
 }
