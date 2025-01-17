@@ -40,7 +40,7 @@ public class CutsceneManager : MonoBehaviour
         SceneManager.LoadScene(gameSceneName);
     }
 
-    void EndApplication()
+    public void EndApplication()
     {
         Application.Quit();
     }
