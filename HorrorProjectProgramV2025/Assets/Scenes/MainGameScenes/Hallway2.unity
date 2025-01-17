@@ -134,7 +134,7 @@ GameObject:
   m_Layer: 0
   m_Name: Postion
   m_TagString: Door
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -147,7 +147,7 @@ Transform:
   m_GameObject: {fileID: 41461393}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.582026, y: -1.38, z: 0}
+  m_LocalPosition: {x: -5.5820255, y: -1.6300001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -204,7 +204,7 @@ GameObject:
   m_Layer: 0
   m_Name: Postion
   m_TagString: Door
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -217,7 +217,7 @@ Transform:
   m_GameObject: {fileID: 79684853}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.5472455, y: -1.3800001, z: 0}
+  m_LocalPosition: {x: -2.5472455, y: -1.6300001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -652,7 +652,7 @@ GameObject:
   m_Layer: 0
   m_Name: Door3
   m_TagString: Door
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -710,7 +710,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.25
+  m_Radius: 1
 --- !u!4 &408035416
 Transform:
   m_ObjectHideFlags: 0
@@ -720,8 +720,8 @@ Transform:
   m_GameObject: {fileID: 408035413}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.29, y: -0.77992725, z: 0}
-  m_LocalScale: {x: 3.71, y: 3.71, z: 3.71}
+  m_LocalPosition: {x: -2.29, y: -1.0299273, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 77748380}
@@ -738,7 +738,7 @@ GameObject:
   m_Layer: 0
   m_Name: Postion
   m_TagString: Door
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -751,7 +751,7 @@ Transform:
   m_GameObject: {fileID: 425602390}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.0619645, y: -1.38, z: 0}
+  m_LocalPosition: {x: 5.0619645, y: -1.6300001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -993,7 +993,7 @@ GameObject:
   m_Layer: 0
   m_Name: Postion
   m_TagString: Door
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1006,7 +1006,7 @@ Transform:
   m_GameObject: {fileID: 550397256}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.603355, y: -1.38, z: 0}
+  m_LocalPosition: {x: -11.603355, y: -1.6300001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2215,7 +2215,7 @@ GameObject:
   m_Layer: 0
   m_Name: Postion
   m_TagString: Door
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2228,7 +2228,7 @@ Transform:
   m_GameObject: {fileID: 1256846694}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.112975, y: -1.38, z: 0}
+  m_LocalPosition: {x: 11.112975, y: -1.6300001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2476,7 +2476,7 @@ GameObject:
   m_Layer: 0
   m_Name: Door1
   m_TagString: Door
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2534,7 +2534,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.25
+  m_Radius: 1
 --- !u!4 &1519928291
 Transform:
   m_ObjectHideFlags: 0
@@ -2545,7 +2545,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -8.377001, y: -1.0299273, z: 0}
-  m_LocalScale: {x: 3.71, y: 3.71, z: 3.71}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 77748380}
@@ -2562,7 +2562,7 @@ GameObject:
   m_Layer: 0
   m_Name: Postion
   m_TagString: Door
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2575,7 +2575,7 @@ Transform:
   m_GameObject: {fileID: 1645816174}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.0679946, y: -1.38, z: 0}
+  m_LocalPosition: {x: 2.0679946, y: -1.6300001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2630,7 +2630,7 @@ GameObject:
   m_Layer: 0
   m_Name: Door2
   m_TagString: Door
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2688,7 +2688,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.25
+  m_Radius: 1
 --- !u!4 &1682311453
 Transform:
   m_ObjectHideFlags: 0
@@ -2699,7 +2699,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -5.31, y: -1.0299273, z: 0}
-  m_LocalScale: {x: 3.71, y: 3.71, z: 3.71}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 77748380}
@@ -2915,7 +2915,7 @@ GameObject:
   m_Layer: 0
   m_Name: Postion
   m_TagString: Door
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2928,7 +2928,7 @@ Transform:
   m_GameObject: {fileID: 1893821368}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.587126, y: -1.38, z: 0}
+  m_LocalPosition: {x: -8.587126, y: -1.6300001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
