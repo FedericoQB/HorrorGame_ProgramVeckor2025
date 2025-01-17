@@ -17,13 +17,27 @@ public class SpawnDoorThing : MonoBehaviour
     public GameObject Door2Floor3;
     public GameObject Door3Floor3;
 
-    public bool f1;
-    public bool f2;
-    public bool f3;
+    private bool f1 = true;
+    private bool f2 = true;
+    private bool f3 = true;
 
-    public List<Vector2> SpawnPoints1;
-    public List<Vector2> SpawnPoints2;
-    public List<Vector2> SpawnPoints3;
+    public List<GameObject> SpawnPoints1;
+    public List<GameObject> SpawnPoints2;
+    public List<GameObject> SpawnPoints3;
+
+    private Vector2 DoorPoint1F;
+    private Vector2 DoorPoint2F1;
+    private Vector2 DoorPoint2F2;
+    private Vector2 DoorPoint2F3;
+    private Vector2 DoorPoint3F1;
+    private Vector2 DoorPoint3F2;
+    private Vector2 DoorPoint3F3;
+
+    private void Start()
+    {
+        DontDestroyOnLoad(gameObject);
+        DoorFloor1 = GameObject.Find("Door");
+    }
 
     private void Update()
     {
@@ -31,7 +45,8 @@ public class SpawnDoorThing : MonoBehaviour
 
         if (SceneID == 3 && f1 && DoorFloor1 != null)
         {
-            DoorFloor1.transform.position = SpawnPoints1[(int)Random.Range(0f, (float)SpawnPoints1.Count - 1f)];
+            DoorFloor1.transform.position = SpawnPoints1[(int)Random.Range(0f, (float)SpawnPoints1.Count - 1f)].transform.position;
+            DoorPoint1F = DoorFloor1.transform.position;
             f1 = false;
         }
 
@@ -40,19 +55,22 @@ public class SpawnDoorThing : MonoBehaviour
             int id = (int)Random.Range(0f, (float)SpawnPoints2.Count - 1f);
             if (Door1Floor2 != null)
             {
-                Door1Floor2.transform.position = SpawnPoints2[id];
+                Door1Floor2.transform.position = SpawnPoints2[id].transform.position;
+                DoorPoint2F1 = Door1Floor2.transform.position;
                 SpawnPoints2.RemoveAt(id);
             }
             if (Door2Floor2 != null)
             {
                 id = (int)Random.Range(0f, (float)SpawnPoints2.Count - 1f);
-                Door2Floor2.transform.position = SpawnPoints2[id];
+                Door2Floor2.transform.position = SpawnPoints2[id].transform.position;
+                DoorPoint2F2 = Door2Floor2.transform.position;
                 SpawnPoints2.RemoveAt(id);
             }
             if (Door3Floor2 != null)
             {
                 id = (int)Random.Range(0f, (float)SpawnPoints2.Count - 1f);
-                Door3Floor2.transform.position = SpawnPoints2[id];
+                Door3Floor2.transform.position = SpawnPoints2[id].transform.position;
+                DoorPoint2F3 = Door3Floor2.transform.position;
                 SpawnPoints2.RemoveAt(id);
             }
             f2 = false;
@@ -64,23 +82,50 @@ public class SpawnDoorThing : MonoBehaviour
 
             if (Door1Floor3 != null)
             {
-                Door1Floor3.transform.position = SpawnPoints3[id];
+                Door1Floor3.transform.position = SpawnPoints3[id].transform.position;
+                DoorPoint3F1 = Door1Floor3.transform.position;
                 SpawnPoints3.RemoveAt(id);
             }
             if (Door2Floor3 != null)
             {
                 id = (int)Random.Range(0f, (float)SpawnPoints3.Count - 1f);
-                Door2Floor3.transform.position = SpawnPoints3[id];
+                Door2Floor3.transform.position = SpawnPoints3[id].transform.position;
+                DoorPoint3F2 = Door2Floor3.transform.position;
                 SpawnPoints2.RemoveAt(id);
             }
             if (Door3Floor3 != null)
             {
                 id = (int)Random.Range(0f, (float)SpawnPoints3.Count - 1f);
-                Door3Floor3.transform.position = SpawnPoints3[id];
+                Door3Floor3.transform.position = SpawnPoints3[id].transform.position;
+                DoorPoint3F3 = Door3Floor3.transform.position;
                 SpawnPoints3.RemoveAt(id);
             }
-
             f3 = false;
+        }
+
+        if (SceneID == 3 && !f1)
+        {
+            DoorFloor1.transform.position = DoorPoint1F;
+            try
+            {
+                GameObject door = GameObject.Find("Room 3");
+                door.transform.position = new Vector3(DoorPoint1F.x + 3.7f, 1.09f, 3);
+            }
+            catch { }
+        }
+
+        if (SceneID == 4 && !f2)
+        {
+            Door1Floor2.transform.position = DoorPoint2F1;
+            Door2Floor2.transform.position = DoorPoint2F2;
+            Door3Floor2.transform.position = DoorPoint2F3;
+        }
+
+        if (SceneID == 5 && !f3)
+        {
+            Door1Floor3.transform.position = DoorPoint3F1;
+            Door2Floor3.transform.position = DoorPoint3F2;
+            Door3Floor3.transform.position = DoorPoint3F3;
         }
     }
 }

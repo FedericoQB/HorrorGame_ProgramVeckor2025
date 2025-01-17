@@ -46,7 +46,7 @@ public class EnemyAI : MonoBehaviour
     public void Idle()
     {
         gameObject.GetComponent<Renderer>().enabled = true;
-        gameObject.GetComponent<EnemyDamageExample>().enabled = true;
+        gameObject.GetComponent<EnemyDamageExample>().enabled = false;
 
         GameObject[] targets = GameObject.FindGameObjectsWithTag("Player");
         if (targets.Length > 0)
@@ -97,6 +97,11 @@ public class EnemyAI : MonoBehaviour
     {
         gameObject.GetComponent<Renderer>().enabled = true;
         gameObject.GetComponent<EnemyDamageExample>().enabled = true;
+        Collider2D hitboxCollider = GetHitboxCollider();
+        if (hitboxCollider != null)
+        {
+            hitboxCollider.enabled = true;
+        }
         GameObject[] targets = GameObject.FindGameObjectsWithTag("Player");
         if (targets.Length > 0)
         {
@@ -108,7 +113,19 @@ public class EnemyAI : MonoBehaviour
     public void RunawayPlayer()
     {
         gameObject.GetComponent<Renderer>().enabled = false;
-        gameObject.GetComponent<EnemyDamageExample>().enabled = false;
+
+        EnemyDamageExample damageComponent = gameObject.GetComponent<EnemyDamageExample>();
+        if (damageComponent != null)
+        {
+            damageComponent.enabled = false;
+        }
+
+        Collider2D hitboxCollider = GetHitboxCollider();
+        if (hitboxCollider != null)
+        {
+            hitboxCollider.enabled = false;
+        }
+
         GameObject[] targets = GameObject.FindGameObjectsWithTag("Player");
         if (targets.Length > 0)
         {
@@ -126,9 +143,25 @@ public class EnemyAI : MonoBehaviour
                     action = "Idle";
                 }
             }
+
             float distance = Vector2.Distance(targets[0].transform.position, transform.position);
+
             rb.velocity = (Vector3.Normalize(-direction) * (speed / (distance / speedOffset)));
         }
     }
+
+    private Collider2D GetHitboxCollider()
+    {
+        Collider2D[] colliders = GetComponents<Collider2D>();
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.isTrigger)
+            {
+                return collider;
+            }
+        }
+        return null;
+    }
+
 
 }
