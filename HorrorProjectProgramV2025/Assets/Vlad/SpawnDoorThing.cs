@@ -121,17 +121,29 @@ public class SpawnDoorThing : MonoBehaviour
         {
             try
             {
-                Door1Floor2.transform.position = DoorPoint2F1;
-                GameObject room1 = GameObject.Find("Room 1");
-                room1.transform.position = new Vector3(DoorPoint2F1.x + 3.7f, 1.09f, 3);
+                try
+                {
+                    Door1Floor2.transform.position = DoorPoint2F1;
+                    GameObject room1 = GameObject.Find("Room 1");
+                    room1.transform.position = new Vector3(DoorPoint2F1.x + 3.7f, 0.65f, 3);
+                }
+                catch { }
 
-                Door2Floor2.transform.position = DoorPoint2F2;
-                GameObject room2 = GameObject.Find("Room 2");
-                room2.transform.position = new Vector3(DoorPoint2F2.x + 3.7f, 1.09f, 3);
+                try
+                {
+                    Door2Floor2.transform.position = DoorPoint2F2;
+                    GameObject room2 = GameObject.Find("Room 2");
+                    room2.transform.position = new Vector3(DoorPoint2F2.x + 3.7f, 0.65f, 3);
+                }
+                catch {}
 
-                Door3Floor2.transform.position = DoorPoint2F3;
-                GameObject room3 = GameObject.Find("Room 3");
-                room3.transform.position = new Vector3(DoorPoint2F3.x + 3.7f, 1.09f, 3);
+                try
+                {
+                    Door3Floor2.transform.position = DoorPoint2F3;
+                    GameObject room3 = GameObject.Find("Room 3");
+                    room3.transform.position = new Vector3(DoorPoint2F3.x + 3.7f, 0.65f, 3);
+                }
+                catch { }
             }
             catch {}
         }
