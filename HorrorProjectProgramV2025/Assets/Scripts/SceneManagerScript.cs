@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Video;
@@ -37,5 +38,10 @@ public class CutsceneManager : MonoBehaviour
 
         // Load the main game scene
         SceneManager.LoadScene(gameSceneName);
+    }
+
+    void EndApplication()
+    {
+        Application.Quit();
     }
 }
