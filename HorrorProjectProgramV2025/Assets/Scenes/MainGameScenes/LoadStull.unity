@@ -886,20 +886,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4098657dd0cadd4ea658e632e9daa77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quest1: {fileID: 706754433}
-  quest2: {fileID: 706754432}
-  quest3: {fileID: 706754431}
-  quest4: {fileID: 706754430}
-  quest5: {fileID: 706754429}
-  quest6: {fileID: 706754428}
-  quest7: {fileID: 706754427}
-  checkmark1: {fileID: 706754440}
-  checkmark2: {fileID: 706754439}
-  checkmark3: {fileID: 706754438}
-  checkmark4: {fileID: 706754437}
-  checkmark5: {fileID: 706754436}
-  checkmark6: {fileID: 706754435}
-  checkmark7: {fileID: 706754434}
+  quests:
+  - {fileID: 706754433}
+  - {fileID: 706754432}
+  - {fileID: 706754431}
+  - {fileID: 706754430}
+  - {fileID: 706754429}
+  - {fileID: 706754428}
+  - {fileID: 706754427}
+  checkMarks:
+  - {fileID: 706754440}
+  - {fileID: 706754439}
+  - {fileID: 706754438}
+  - {fileID: 706754437}
+  - {fileID: 706754436}
+  - {fileID: 706754435}
+  - {fileID: 706754434}
 --- !u!1001 &1078691883
 PrefabInstance:
   m_ObjectHideFlags: 0
