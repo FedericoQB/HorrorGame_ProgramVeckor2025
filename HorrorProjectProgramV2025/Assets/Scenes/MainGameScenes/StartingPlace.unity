@@ -1562,7 +1562,6 @@ GameObject:
   m_Component:
   - component: {fileID: 411281813}
   - component: {fileID: 411281812}
-  - component: {fileID: 411281811}
   - component: {fileID: 411281810}
   - component: {fileID: 411281814}
   m_Layer: 0
@@ -1607,26 +1606,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -1.014979}
   serializedVersion: 2
   m_Radius: 1.5996166
---- !u!114 &411281811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 411281809}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b806da336899f9f42821237c88263905, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isAbleToPickUp: 1
-  isADoor: 0
-  isLocked: 0
-  isAbleToTurnOn: 0
-  isInteractableAgain: 0
-  completesQuest: 0
-  newRoom: {fileID: 0}
-  OriginalRoom: {fileID: 0}
 --- !u!212 &411281812
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1703,10 +1682,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 411281809}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3806558559e64b548ac396996beda212, type: 3}
+  m_Script: {fileID: 11500000, guid: 74a364cfb4acabd4db36da2723a35853, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  depthPivot: {fileID: 0}
+  completesQuest: 0
 --- !u!1 &477882244
 GameObject:
   m_ObjectHideFlags: 0
