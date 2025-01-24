@@ -830,8 +830,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 483373240}
-  - component: {fileID: 483373242}
   - component: {fileID: 483373241}
+  - component: {fileID: 483373242}
   m_Layer: 0
   m_Name: HeartRoomExit
   m_TagString: HeartRoomExit
@@ -898,14 +898,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 483373239}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b806da336899f9f42821237c88263905, type: 3}
+  m_Script: {fileID: 11500000, guid: b684541656c9f9643ae73744095e532f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isAbleToPickUp: 0
-  isADoor: 1
   isLocked: 0
-  isAbleToTurnOn: 0
-  isInteractableAgain: 0
+  isOn: 1
+  isInteractableAgain: 1
   completesQuest: 0
   newRoom: {fileID: 385380473}
   OriginalRoom: {fileID: 2032833217}
@@ -918,8 +916,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 496783931}
-  - component: {fileID: 496783933}
   - component: {fileID: 496783932}
+  - component: {fileID: 496783933}
   m_Layer: 0
   m_Name: DanceRoomExit
   m_TagString: Door
@@ -986,17 +984,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 496783930}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b806da336899f9f42821237c88263905, type: 3}
+  m_Script: {fileID: 11500000, guid: b684541656c9f9643ae73744095e532f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isAbleToPickUp: 0
-  isADoor: 1
   isLocked: 0
-  isAbleToTurnOn: 0
-  isInteractableAgain: 0
+  isOn: 1
+  isInteractableAgain: 1
   completesQuest: 0
   newRoom: {fileID: 385380473}
-  OriginalRoom: {fileID: 477657334}
+  OriginalRoom: {fileID: 0}
 --- !u!1 &819802597
 GameObject:
   m_ObjectHideFlags: 0
@@ -1967,8 +1963,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1454698989}
-  - component: {fileID: 1454698990}
   - component: {fileID: 1454698991}
+  - component: {fileID: 1454698992}
   m_Layer: 0
   m_Name: HeartRoomEntrance
   m_TagString: Door
@@ -1991,26 +1987,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 385380474}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1454698990
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1454698988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b806da336899f9f42821237c88263905, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isAbleToPickUp: 0
-  isADoor: 1
-  isLocked: 0
-  isAbleToTurnOn: 0
-  isInteractableAgain: 0
-  completesQuest: 1
-  newRoom: {fileID: 2032833217}
-  OriginalRoom: {fileID: 385380473}
 --- !u!58 &1454698991
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2046,6 +2022,24 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.08759427}
   serializedVersion: 2
   m_Radius: 1.2382953
+--- !u!114 &1454698992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1454698988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b684541656c9f9643ae73744095e532f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isLocked: 0
+  isOn: 1
+  isInteractableAgain: 1
+  completesQuest: 0
+  newRoom: {fileID: 2032833217}
+  OriginalRoom: {fileID: 385380473}
 --- !u!1 &1516706802
 GameObject:
   m_ObjectHideFlags: 0
@@ -3058,8 +3052,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2011444020}
-  - component: {fileID: 2011444022}
   - component: {fileID: 2011444021}
+  - component: {fileID: 2011444022}
   m_Layer: 0
   m_Name: DanceRoomEntrance
   m_TagString: Door
@@ -3126,14 +3120,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2011444019}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b806da336899f9f42821237c88263905, type: 3}
+  m_Script: {fileID: 11500000, guid: b684541656c9f9643ae73744095e532f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isAbleToPickUp: 0
-  isADoor: 1
   isLocked: 0
-  isAbleToTurnOn: 0
-  isInteractableAgain: 0
+  isOn: 1
+  isInteractableAgain: 1
   completesQuest: 0
   newRoom: {fileID: 477657334}
   OriginalRoom: {fileID: 385380473}

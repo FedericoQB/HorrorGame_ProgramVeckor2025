@@ -649,6 +649,7 @@ GameObject:
   - component: {fileID: 408035416}
   - component: {fileID: 408035415}
   - component: {fileID: 408035414}
+  - component: {fileID: 408035417}
   m_Layer: 0
   m_Name: Door3
   m_TagString: Door
@@ -726,6 +727,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 77748380}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &408035417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408035413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b684541656c9f9643ae73744095e532f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isLocked: 0
+  isOn: 1
+  isInteractableAgain: 1
+  completesQuest: 0
+  newRoom: {fileID: 1647621277}
+  OriginalRoom: {fileID: 77748378}
 --- !u!1 &425602390
 GameObject:
   m_ObjectHideFlags: 0
@@ -1022,7 +1041,7 @@ GameObject:
   m_Component:
   - component: {fileID: 709922606}
   - component: {fileID: 709922608}
-  - component: {fileID: 709922607}
+  - component: {fileID: 709922609}
   m_Layer: 0
   m_Name: Exit
   m_TagString: Door
@@ -1045,26 +1064,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1647621278}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &709922607
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 709922605}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b806da336899f9f42821237c88263905, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isAbleToPickUp: 0
-  isADoor: 1
-  isLocked: 0
-  isAbleToTurnOn: 0
-  isInteractableAgain: 0
-  completesQuest: 0
-  newRoom: {fileID: 77748378}
-  OriginalRoom: {fileID: 1647621277}
 --- !u!58 &709922608
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1100,6 +1099,24 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.71
+--- !u!114 &709922609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 709922605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b684541656c9f9643ae73744095e532f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isLocked: 0
+  isOn: 1
+  isInteractableAgain: 1
+  completesQuest: 0
+  newRoom: {fileID: 77748378}
+  OriginalRoom: {fileID: 1647621277}
 --- !u!1 &730331695
 GameObject:
   m_ObjectHideFlags: 0
@@ -1196,7 +1213,7 @@ GameObject:
   m_Component:
   - component: {fileID: 962813815}
   - component: {fileID: 962813817}
-  - component: {fileID: 962813816}
+  - component: {fileID: 962813818}
   m_Layer: 0
   m_Name: Exit
   m_TagString: Door
@@ -1219,26 +1236,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 301219696}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &962813816
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 962813814}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b806da336899f9f42821237c88263905, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isAbleToPickUp: 0
-  isADoor: 1
-  isLocked: 0
-  isAbleToTurnOn: 0
-  isInteractableAgain: 0
-  completesQuest: 0
-  newRoom: {fileID: 77748378}
-  OriginalRoom: {fileID: 301219695}
 --- !u!58 &962813817
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1274,6 +1271,24 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.71
+--- !u!114 &962813818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 962813814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b684541656c9f9643ae73744095e532f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isLocked: 0
+  isOn: 1
+  isInteractableAgain: 1
+  completesQuest: 0
+  newRoom: {fileID: 77748378}
+  OriginalRoom: {fileID: 301219695}
 --- !u!1 &1103198501
 GameObject:
   m_ObjectHideFlags: 0
@@ -2395,14 +2410,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1269676362}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b806da336899f9f42821237c88263905, type: 3}
+  m_Script: {fileID: 11500000, guid: b684541656c9f9643ae73744095e532f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isAbleToPickUp: 0
-  isADoor: 1
   isLocked: 0
-  isAbleToTurnOn: 0
-  isInteractableAgain: 0
+  isOn: 1
+  isInteractableAgain: 1
   completesQuest: 0
   newRoom: {fileID: 77748378}
   OriginalRoom: {fileID: 2095462178}
@@ -2556,7 +2569,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1519928291}
   - component: {fileID: 1519928290}
-  - component: {fileID: 1519928289}
+  - component: {fileID: 1519928292}
   m_Layer: 0
   m_Name: Door1
   m_TagString: Door
@@ -2564,26 +2577,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1519928289
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1519928288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b806da336899f9f42821237c88263905, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isAbleToPickUp: 0
-  isADoor: 1
-  isLocked: 0
-  isAbleToTurnOn: 0
-  isInteractableAgain: 1
-  completesQuest: 0
-  newRoom: {fileID: 2095462178}
-  OriginalRoom: {fileID: 77748378}
 --- !u!58 &1519928290
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2634,6 +2627,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 77748380}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1519928292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519928288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b684541656c9f9643ae73744095e532f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isLocked: 0
+  isOn: 1
+  isInteractableAgain: 1
+  completesQuest: 0
+  newRoom: {fileID: 2095462178}
+  OriginalRoom: {fileID: 77748378}
 --- !u!1 &1645816174
 GameObject:
   m_ObjectHideFlags: 0
@@ -2711,6 +2722,7 @@ GameObject:
   - component: {fileID: 1682311453}
   - component: {fileID: 1682311452}
   - component: {fileID: 1682311451}
+  - component: {fileID: 1682311454}
   m_Layer: 0
   m_Name: Door2
   m_TagString: Door
@@ -2788,6 +2800,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 77748380}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1682311454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1682311450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b684541656c9f9643ae73744095e532f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isLocked: 0
+  isOn: 1
+  isInteractableAgain: 1
+  completesQuest: 0
+  newRoom: {fileID: 301219695}
+  OriginalRoom: {fileID: 77748378}
 --- !u!1 &1684200899
 GameObject:
   m_ObjectHideFlags: 0
