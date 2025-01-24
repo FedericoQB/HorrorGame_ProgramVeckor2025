@@ -17,22 +17,28 @@ public class ReusableMusicTrigger : MonoBehaviour
         audioSource.playOnAwake = false; // Prevent music from starting automatically
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
+
+        print("something entered");
+        print(other.tag);
         if (other.CompareTag("Player") && playOnEnter)
         {
             if (musicClip != null)
             {
+                print("playing music");
                 audioSource.clip = musicClip;
-                audioSource.Play();
+                audioSource.PlayOneShot(musicClip);
             }
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerExit2D(Collider2D other)
     {
+        print("something exited");
         if (other.CompareTag("Player") && stopOnExit)
         {
+            print("stopping muisc");
             audioSource.Stop();
         }
     }
