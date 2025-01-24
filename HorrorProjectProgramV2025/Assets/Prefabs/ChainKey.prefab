@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2300103574948201697}
-  - component: {fileID: 183360525893396878}
   - component: {fileID: 35165128316580189}
   - component: {fileID: 3203073689506250389}
   - component: {fileID: 3099459994729689813}
   - component: {fileID: 4427880726896750818}
+  - component: {fileID: 8645637942029779264}
   m_Layer: 0
   m_Name: ChainKey
   m_TagString: ChainKey
@@ -36,26 +36,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &183360525893396878
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9085420079615064776}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b806da336899f9f42821237c88263905, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isAbleToPickUp: 1
-  isADoor: 0
-  isLocked: 0
-  isAbleToTurnOn: 0
-  isInteractableAgain: 0
-  completesQuest: 0
-  newRoom: {fileID: 0}
-  OriginalRoom: {fileID: 0}
 --- !u!212 &35165128316580189
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -214,3 +194,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.0035961205}
   serializedVersion: 2
   m_Radius: 0.23748691
+--- !u!114 &8645637942029779264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9085420079615064776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74a364cfb4acabd4db36da2723a35853, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  completesQuest: 1

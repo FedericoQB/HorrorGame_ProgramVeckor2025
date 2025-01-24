@@ -594,7 +594,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2300103574948201697, guid: 08303e25605972849ab76de53de8490c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.029768469
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300103574948201697, guid: 08303e25605972849ab76de53de8490c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -623,6 +623,30 @@ PrefabInstance:
     - target: {fileID: 2300103574948201697, guid: 08303e25605972849ab76de53de8490c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3099459994729689813, guid: 08303e25605972849ab76de53de8490c, type: 3}
+      propertyPath: m_LightType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3099459994729689813, guid: 08303e25605972849ab76de53de8490c, type: 3}
+      propertyPath: m_PointLightOuterRadius
+      value: 0.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 3099459994729689813, guid: 08303e25605972849ab76de53de8490c, type: 3}
+      propertyPath: m_LocalBounds.m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3099459994729689813, guid: 08303e25605972849ab76de53de8490c, type: 3}
+      propertyPath: m_LocalBounds.m_Center.y
+      value: -0.00000011920929
+      objectReference: {fileID: 0}
+    - target: {fileID: 3099459994729689813, guid: 08303e25605972849ab76de53de8490c, type: 3}
+      propertyPath: m_LocalBounds.m_Extent.x
+      value: 0.9985302
+      objectReference: {fileID: 0}
+    - target: {fileID: 3099459994729689813, guid: 08303e25605972849ab76de53de8490c, type: 3}
+      propertyPath: m_LocalBounds.m_Extent.y
+      value: 0.99853027
       objectReference: {fileID: 0}
     - target: {fileID: 9085420079615064776, guid: 08303e25605972849ab76de53de8490c, type: 3}
       propertyPath: m_Name
@@ -669,14 +693,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b806da336899f9f42821237c88263905, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isAbleToPickUp: 0
-  isADoor: 1
-  isLocked: 0
-  isAbleToTurnOn: 0
-  isInteractableAgain: 1
-  completesQuest: 0
-  newRoom: {fileID: 1647621277}
-  OriginalRoom: {fileID: 77748378}
 --- !u!58 &408035415
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2742,14 +2758,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b806da336899f9f42821237c88263905, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isAbleToPickUp: 0
-  isADoor: 1
-  isLocked: 0
-  isAbleToTurnOn: 0
-  isInteractableAgain: 1
-  completesQuest: 0
-  newRoom: {fileID: 301219695}
-  OriginalRoom: {fileID: 77748378}
 --- !u!58 &1682311452
 CircleCollider2D:
   m_ObjectHideFlags: 0
