@@ -20,7 +20,13 @@ public class TurnOnOffScript : MonoBehaviour
         if (isPlayerNear == true && Input.GetKeyDown(KeyCode.E) && isOn == true)
         {
             isOn = false;
+            if (gameObject.tag == "Generator")
+            {
+                Debug.Log("Generator is on");
+                GeneratorScript.isGeneratorOn = true;
 
+                AddToJournal();
+            }
         }
 
         if (isInteractableAgain == true)
@@ -43,5 +49,10 @@ public class TurnOnOffScript : MonoBehaviour
         {
             isPlayerNear = false;
         }
+    }
+
+    void AddToJournal()
+    {
+        JournalScript.questNumber++;
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerStatsScript : MonoBehaviour
 {
-    public static bool hasCutterBolts = false;
+    public static bool hasChainKeys = false;
     public static bool hasKey = false;
     public static int flashlightBatteryProcent = 100;
 

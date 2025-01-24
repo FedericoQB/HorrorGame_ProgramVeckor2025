@@ -22,6 +22,7 @@ public class PickupScript : MonoBehaviour
             if (tagOfObject == "Key")
             {
                 Debug.Log("Key Picked Up");
+                PlayerStatsScript.hasKey = true;
             }
             else if (tagOfObject == "Battery")
             {
@@ -32,6 +33,13 @@ public class PickupScript : MonoBehaviour
             {
                 UpdateJournal();
             }
+
+            if (tagOfObject == "ChainKey")
+            {
+                PlayerStatsScript.hasChainKeys = true;
+            }
+
+            Destroy(gameObject);
         }
     }
 
