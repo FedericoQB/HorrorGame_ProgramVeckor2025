@@ -44,7 +44,7 @@ public class GeneratorScript : MonoBehaviour
             generatorLamp.SetActive(false);
             generatorLampState2.SetActive(true);
 
-            unlockDoor.GetComponent<InteractionSystemScript>().isLocked = false;
+            unlockDoor.GetComponent<DoorScript>().isLocked = false;
 
             // Play powered-up sound if it's assigned
             if (poweredUpSound != null && !audioSource.isPlaying)
