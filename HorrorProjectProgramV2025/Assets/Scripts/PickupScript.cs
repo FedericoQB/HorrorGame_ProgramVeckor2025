@@ -38,6 +38,8 @@ public class PickupScript : MonoBehaviour
             {
                 PlayerStatsScript.hasChainKeys = true;
             }
+
+            Destroy(gameObject);
         }
     }
 
