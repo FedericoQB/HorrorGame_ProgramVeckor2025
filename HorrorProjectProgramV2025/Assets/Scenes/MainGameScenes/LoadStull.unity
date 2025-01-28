@@ -970,6 +970,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3792026733441123547, guid: 300e61b12de24c440902d28efd7da786, type: 3}
+      propertyPath: multiplierDrain
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4125943993944209258, guid: 300e61b12de24c440902d28efd7da786, type: 3}
       propertyPath: m_Color.a
       value: 0

@@ -27,6 +27,7 @@ public class PickupScript : MonoBehaviour
             else if (tagOfObject == "Battery")
             {
                 Debug.Log("Battery Picked Up");
+                PlayerStatsScript.flashlightBatteryProcent = 100;
             }
 
             if (completesQuest == true)
