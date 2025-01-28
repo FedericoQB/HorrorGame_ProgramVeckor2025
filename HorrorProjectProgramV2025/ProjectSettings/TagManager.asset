@@ -17,6 +17,7 @@ TagManager:
   - HeartRoomExit
   - ChainKey
   - Exit
+  - Battery
   layers:
   - Default
   - TransparentFX
