@@ -10,7 +10,8 @@ public class FlashlightScript : MonoBehaviour
     public AudioClip toggleSound; // Sound for flashlight toggle
 
     private AudioSource audioSource; // AudioSource to play the toggle sound
-    bool lightOn = false;
+    public static bool lightOn = false;
+    public static bool enoughBattery;
     Quaternion flashlightAngle = new Quaternion();
 
     void Start()
@@ -51,7 +52,7 @@ public class FlashlightScript : MonoBehaviour
         }
 
         // Activation of Flashlight
-        if (Input.GetKeyDown(KeyCode.F) && lightOn != true)
+        if (Input.GetKeyDown(KeyCode.F) && lightOn != true && enoughBattery == true)
         {
             flashLight.SetActive(true);
             lightConePivot.SetActive(true);
@@ -70,6 +71,11 @@ public class FlashlightScript : MonoBehaviour
 
             // Play the toggle sound
             PlayToggleSound();
+        }
+
+        if (enoughBattery == false)
+        {
+            flashLight.SetActive(false);
         }
 
         flashLight.transform.rotation = flashlightAngle;

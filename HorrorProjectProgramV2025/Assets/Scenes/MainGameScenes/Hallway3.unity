@@ -2142,6 +2142,7 @@ GameObject:
   - component: {fileID: 1581742336}
   - component: {fileID: 1581742338}
   - component: {fileID: 1581742337}
+  - component: {fileID: 1581742339}
   m_Layer: 0
   m_Name: ChainCollider2
   m_TagString: Chain
@@ -2196,9 +2197,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.04964815, y: -0.029337546}
+  m_Offset: {x: 0.16697092, y: -0.029337546}
   serializedVersion: 2
-  m_Radius: 0.19534075
+  m_Radius: 0.31266347
 --- !u!212 &1581742337
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2272,6 +2273,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1581742339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581742333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52f7108b60b3ff143952f245416f3b53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1658326572
 GameObject:
   m_ObjectHideFlags: 0
@@ -2782,9 +2795,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.031594295, y: -0.015797134}
+  m_Offset: {x: -0.0835726, y: -0.015797134}
   serializedVersion: 2
-  m_Radius: 0.20888108
+  m_Radius: 0.28759122
 --- !u!95 &1737920912
 Animator:
   serializedVersion: 5
@@ -3259,10 +3272,63 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 3723794577360214125, guid: ccf7178eb33101345be8a60997c1d876, type: 3}
     - {fileID: 5874754493918375337, guid: ccf7178eb33101345be8a60997c1d876, type: 3}
+    - {fileID: 8308862933041460084, guid: ccf7178eb33101345be8a60997c1d876, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1017922610596115349, guid: ccf7178eb33101345be8a60997c1d876, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8729891373918661520}
   m_SourcePrefab: {fileID: 100100000, guid: ccf7178eb33101345be8a60997c1d876, type: 3}
+--- !u!1 &8729891373918661519 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1017922610596115349, guid: ccf7178eb33101345be8a60997c1d876, type: 3}
+  m_PrefabInstance: {fileID: 8729891373918661518}
+  m_PrefabAsset: {fileID: 0}
+--- !u!68 &8729891373918661520
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8729891373918661519}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.19210714, y: -0.14850976}
+  - {x: -0.19307114, y: -0.48797673}
+  - {x: -0.017346706, y: -0.5165702}
+  - {x: 0.17469992, y: -0.49187303}
+  - {x: 0.16834557, y: -0.13959916}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
