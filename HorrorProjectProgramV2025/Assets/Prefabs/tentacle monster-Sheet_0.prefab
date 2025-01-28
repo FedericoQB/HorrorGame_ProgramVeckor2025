@@ -215,8 +215,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 04e692652db58b6498466e8382981268, type: 3}
   - {fileID: 8300000, guid: 460390041a799414fa973e5099c53871, type: 3}
   - {fileID: 8300000, guid: b035e481eb729e24ea52f09a8b094318, type: 3}
-  minTimeBetweenScreams: 1
-  maxTimeBetweenScreams: 3
+  minTimeBetweenScreams: 3
+  maxTimeBetweenScreams: 5
 --- !u!82 &8573395952405387784
 AudioSource:
   m_ObjectHideFlags: 0
@@ -229,7 +229,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.53
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
