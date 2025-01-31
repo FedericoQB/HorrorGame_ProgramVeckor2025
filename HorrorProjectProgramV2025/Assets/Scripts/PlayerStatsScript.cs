@@ -9,6 +9,8 @@ public class PlayerStatsScript : MonoBehaviour
     public static float flashlightBatteryProcent = 100;
     public int multiplierDrain = 2;
 
+    public static int reserveBattery = 1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +38,16 @@ public class PlayerStatsScript : MonoBehaviour
         Debug.Log(flashlightBatteryProcent);
         if (battery <= 0)
         {
-            FlashlightScript.enoughBattery = false;
+            if (reserveBattery > 0)
+            {
+                reserveBattery--;
+                flashlightBatteryProcent = 100;
+            }
+            else
+            {
+                FlashlightScript.enoughBattery = false;
+            }
+            
         }
         else if (battery > 0)
         {

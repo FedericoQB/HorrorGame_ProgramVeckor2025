@@ -287,7 +287,7 @@ MonoBehaviour:
   isLocked: 1
   isOn: 1
   isInteractableAgain: 0
-  completesQuest: 0
+  completesQuest: 1
   newRoom: {fileID: 1246041801}
   OriginalRoom: {fileID: 1731662686}
 --- !u!1 &43618279
