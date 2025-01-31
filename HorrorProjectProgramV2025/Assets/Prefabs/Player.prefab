@@ -447,6 +447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f11ca814b9fe384ba39d55900b80d8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  multiplierDrain: 2
 --- !u!1 &3854680321395752015
 GameObject:
   m_ObjectHideFlags: 0
@@ -798,5 +799,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneID: 0
-  DoorsInHallway2: []
-  DoorsInHallway3: []
+  DoorFloor1: {fileID: 0}
+  Door1Floor2: {fileID: 0}
+  Door2Floor2: {fileID: 0}
+  Door3Floor2: {fileID: 0}
+  Door1Floor3: {fileID: 0}
+  Door2Floor3: {fileID: 0}
+  Door3Floor3: {fileID: 0}
+  f1: 1
+  f2: 1
+  f3: 1
+  SpawnPoints1: []
+  SpawnPoints2: []
+  SpawnPoints3: []
