@@ -4972,15 +4972,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b806da336899f9f42821237c88263905, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPlayerNear: 0
-  isAbleToPickUp: 0
-  isADoor: 1
-  isLocked: 1
-  isAbleToTurnOn: 0
-  isInteractableAgain: 0
-  completesQuest: 0
-  newRoom: {fileID: 0}
-  OriginalRoom: {fileID: 0}
 --- !u!4 &2115783998
 Transform:
   m_ObjectHideFlags: 0
