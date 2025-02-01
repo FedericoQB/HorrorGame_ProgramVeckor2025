@@ -2728,6 +2728,18 @@ PrefabInstance:
       value: Battery
       objectReference: {fileID: 0}
     - target: {fileID: 8521820652854660988, guid: 6febe58e615b15f448ffe8b7cccfec1a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8521820652854660988, guid: 6febe58e615b15f448ffe8b7cccfec1a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8521820652854660988, guid: 6febe58e615b15f448ffe8b7cccfec1a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8521820652854660988, guid: 6febe58e615b15f448ffe8b7cccfec1a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.74
       objectReference: {fileID: 0}
@@ -2766,6 +2778,22 @@ PrefabInstance:
     - target: {fileID: 8521820652854660988, guid: 6febe58e615b15f448ffe8b7cccfec1a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8993943860699669460, guid: 6febe58e615b15f448ffe8b7cccfec1a, type: 3}
+      propertyPath: m_Radius
+      value: 2.907549
+      objectReference: {fileID: 0}
+    - target: {fileID: 8993943860699669460, guid: 6febe58e615b15f448ffe8b7cccfec1a, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0104904175
+      objectReference: {fileID: 0}
+    - target: {fileID: 8993943860699669460, guid: 6febe58e615b15f448ffe8b7cccfec1a, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.049244165
+      objectReference: {fileID: 0}
+    - target: {fileID: 8993943860699669460, guid: 6febe58e615b15f448ffe8b7cccfec1a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
