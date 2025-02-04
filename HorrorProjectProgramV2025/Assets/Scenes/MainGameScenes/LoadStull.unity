@@ -1057,7 +1057,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3792026733441123547, guid: 300e61b12de24c440902d28efd7da786, type: 3}
       propertyPath: multiplierDrain
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3792026733441123547, guid: 300e61b12de24c440902d28efd7da786, type: 3}
       propertyPath: maxBatteryProcent
