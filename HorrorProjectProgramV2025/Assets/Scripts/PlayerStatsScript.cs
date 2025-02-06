@@ -18,6 +18,10 @@ public class PlayerStatsScript : MonoBehaviour
     public int multiplierDrain = 2;
     public static int reserveBattery = 1;
 
+    [Header("Insanity Settings")]
+    public int insanityLevel = 1;
+    GameObject volumeBox;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +46,7 @@ public class PlayerStatsScript : MonoBehaviour
             flashlightBatteryProcent -= Time.deltaTime * multiplierDrain;
         }
 
+        CheckInsanityLevel();
         
     }
 
@@ -69,5 +74,13 @@ public class PlayerStatsScript : MonoBehaviour
     void UpdateBatteryBar()
     {
         batteryBar.fillAmount = batteryProcent;
+    }
+
+    void CheckInsanityLevel()
+    {
+        if (insanityLevel == 1)
+        {
+
+        }
     }
 }
