@@ -47,7 +47,6 @@ public class PlayerStatsScript : MonoBehaviour
 
     void CheckBattery(float battery)
     {
-        Debug.Log(flashlightBatteryProcent);
         if (battery <= 0)
         {
             if (reserveBattery > 0)

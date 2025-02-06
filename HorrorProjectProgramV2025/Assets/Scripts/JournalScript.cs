@@ -62,6 +62,7 @@ public class JournalScript : MonoBehaviour
             secondPage.SetActive(false);
         }
 
+        // Checks and updates journal
         CheckQuestNumber(questNumber);
         UpdateJournal();
 

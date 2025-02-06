@@ -23,6 +23,7 @@ public class QuestSystemScript : MonoBehaviour
     private void OnEnable()
     {
         UpdateJournal();
+        Debug.Log("QuestSystemActive");
     }
 
     // Update is called once per frame
