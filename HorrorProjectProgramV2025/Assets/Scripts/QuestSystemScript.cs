@@ -37,8 +37,8 @@ public class QuestSystemScript : MonoBehaviour
         Debug.Log("Updated Journal");
         try
         {
-            quests[JournalScript.questNumber].gameObject.SetActive(true);
-            checkMarks[JournalScript.questNumber].gameObject.SetActive(true);
+            quests[JournalScript.questNumber - 1].gameObject.SetActive(true);
+            checkMarks[JournalScript.questNumber - 1].gameObject.SetActive(true);
         }
         catch
         {

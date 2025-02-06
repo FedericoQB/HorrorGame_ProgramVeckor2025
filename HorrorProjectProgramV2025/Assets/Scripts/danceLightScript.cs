@@ -10,22 +10,49 @@ public class danceLightScript : MonoBehaviour
     bool playerIsNear = false;
     int colorNumber = 1;
 
-    float firstVariable = 1f;
-    float secondVariable = 0f;
-    [SerializeField] float secondsBetweenFlickers;
-
-    Light2D lightSource;
-
-    private void Start()
+    // Start is called before the first frame update
+    void Start()
     {
-        lightSource = GetComponent<Light2D>();
-        StartCoroutine(LightFlicker());
+        
     }
 
-    IEnumerator LightFlicker()
+    // Update is called once per frame
+    void Update()
     {
-        yield return new WaitForSeconds(secondsBetweenFlickers);
-        lightSource.intensity = Random.Range(firstVariable, secondVariable);
-        StartCoroutine(LightFlicker());
+        if (playerIsNear == true && Input.GetKeyDown(KeyCode.E))
+        {
+            if (colorNumber == 1)
+            {
+                light.color = Color.red;
+                colorNumber++;
+            }
+            else if (colorNumber == 2)
+            {
+                light.color = Color.blue;
+                colorNumber++;
+            }
+            else if (colorNumber == 3)
+            {
+                light.color = Color.yellow;
+                colorNumber = 1;
+            }
+            
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            playerIsNear = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            playerIsNear = false;
+        }
     }
 }

@@ -787,6 +787,7 @@ GameObject:
   - component: {fileID: 3999872635438561829}
   - component: {fileID: 2814768373163384041}
   - component: {fileID: 3168649965094262482}
+  - component: {fileID: 5449145051062625615}
   m_Layer: 5
   m_Name: JournalCanvas
   m_TagString: Untagged
@@ -878,6 +879,32 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &5449145051062625615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5032949864425332514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4098657dd0cadd4ea658e632e9daa77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quests:
+  - {fileID: 1844624535273186983}
+  - {fileID: 2243705082933285495}
+  - {fileID: 2652378012435180867}
+  - {fileID: 8377543332881390949}
+  - {fileID: 7874228785733449280}
+  - {fileID: 7861949446838188057}
+  checkMarks:
+  - {fileID: 5125693269899730487}
+  - {fileID: 5706738054768268975}
+  - {fileID: 8459667415661676719}
+  - {fileID: 4487906575943061653}
+  - {fileID: 665165332184749940}
+  - {fileID: 7471741860490669006}
 --- !u!1 &5125693269899730487
 GameObject:
   m_ObjectHideFlags: 0
