@@ -26,7 +26,7 @@ public class EnemyAI : MonoBehaviour
             { "Idle", Idle}
         };
 
-        action = "Idle";
+        action = "Chase Player";
     }
 
     void Start()
@@ -140,7 +140,7 @@ public class EnemyAI : MonoBehaviour
                 }
                 else if ((hit.collider != null && !hit.collider.CompareTag("Player")) || hit.collider == null)
                 {
-                    action = "Idle";
+                    action = "Chase Player";
                 }
             }
 

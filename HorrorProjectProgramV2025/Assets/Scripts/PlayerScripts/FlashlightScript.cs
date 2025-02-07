@@ -76,6 +76,7 @@ public class FlashlightScript : MonoBehaviour
         if (enoughBattery == false)
         {
             flashLight.SetActive(false);
+            lightOn = false;
         }
 
         flashLight.transform.rotation = flashlightAngle;

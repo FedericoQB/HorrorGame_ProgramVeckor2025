@@ -16,7 +16,7 @@ public class PlayerStatsScript : MonoBehaviour
     //public float maxBatteryProcent = 100f;
     public static float flashlightBatteryProcent = 100;
     public int multiplierDrain = 2;
-    public static int reserveBattery = 1;
+    public static int reserveBattery = 0;
 
     [Header("Insanity Settings")]
     public int insanityLevel = 1;
