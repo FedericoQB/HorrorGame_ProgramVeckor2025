@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.UI;
 
 public class PlayerStatsScript : MonoBehaviour
@@ -19,13 +22,17 @@ public class PlayerStatsScript : MonoBehaviour
     public static int reserveBattery = 1;
 
     [Header("Insanity Settings")]
-    public int insanityLevel = 1;
-    GameObject volumeBox;
+    public float insanityLevel = 1f;
+    public float breakingPoint = 10f;
+
+
+    //public VolumeProfile volumeProfile;
+    //ChromaticAberration cAb;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        //cAb = volumeProfile.GetComponent<ChromaticAberration>();
     }
 
     // Update is called once per frame
@@ -46,8 +53,8 @@ public class PlayerStatsScript : MonoBehaviour
             flashlightBatteryProcent -= Time.deltaTime * multiplierDrain;
         }
 
-        CheckInsanityLevel();
-        
+        //CheckInsanityLevel(insanityLevel);
+        //insanityLevel += Time.deltaTime;
     }
 
     void CheckBattery(float battery)
@@ -62,6 +69,7 @@ public class PlayerStatsScript : MonoBehaviour
             else
             {
                 FlashlightScript.enoughBattery = false;
+                
             }
             
         }
@@ -76,11 +84,22 @@ public class PlayerStatsScript : MonoBehaviour
         batteryBar.fillAmount = batteryProcent;
     }
 
-    void CheckInsanityLevel()
+    /* Problematic
+    void CheckInsanityLevel(float amount)
     {
-        if (insanityLevel == 1)
+        if (amount > breakingPoint / 2)
         {
+            cAb.intensity.value = 0.5f;
+        }
+        else if (amount > breakingPoint)
+        {
+                cAb.intensity.value = 1f;
+        }
 
+        if (amount < breakingPoint / 2)
+        {
+            cAb.intensity.value = 0f;
         }
     }
+    */
 }
