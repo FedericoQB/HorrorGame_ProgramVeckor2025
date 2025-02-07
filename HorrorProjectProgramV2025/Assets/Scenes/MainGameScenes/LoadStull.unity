@@ -784,6 +784,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 39396041}
     - target: {fileID: 3792026733441123547, guid: 300e61b12de24c440902d28efd7da786, type: 3}
+      propertyPath: volumeProfile
+      value: 
+      objectReference: {fileID: 11400000, guid: c7126301d4e27a44e882d05d79b2659a, type: 2}
+    - target: {fileID: 3792026733441123547, guid: 300e61b12de24c440902d28efd7da786, type: 3}
       propertyPath: batteryProcent
       value: 1
       objectReference: {fileID: 0}
