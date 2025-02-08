@@ -12,25 +12,17 @@ public class SpawnDoorThing : MonoBehaviour
     public GameObject Door1Floor2;
     public GameObject Door2Floor2;
     public GameObject Door3Floor2;
-    public GameObject Door1Floor3;
-    public GameObject Door2Floor3;
-    public GameObject Door3Floor3;
 
     public bool f1 = true;
     public bool f2 = true;
-    public bool f3 = true;
 
     public List<GameObject> SpawnPoints1;
     public List<GameObject> SpawnPoints2;
-    public List<GameObject> SpawnPoints3;
 
     private Vector2 DoorPoint1F;
     private Vector2 DoorPoint2F1;
     private Vector2 DoorPoint2F2;
     private Vector2 DoorPoint2F3;
-    private Vector2 DoorPoint3F1;
-    private Vector2 DoorPoint3F2;
-    private Vector2 DoorPoint3F3;
 
     private void Start()
     {
@@ -79,33 +71,6 @@ public class SpawnDoorThing : MonoBehaviour
             f2 = false;
         }
 
-        if (SceneID == 5 && f3)
-        {
-            int id = (int)Random.Range(0f, (float)SpawnPoints3.Count - 1f);
-
-            if (Door1Floor3 != null)
-            {
-                Door1Floor3.transform.position = SpawnPoints3[id].transform.position;
-                DoorPoint3F1 = Door1Floor3.transform.position;
-                SpawnPoints3.RemoveAt(id);
-            }
-            if (Door2Floor3 != null)
-            {
-                id = (int)Random.Range(0f, (float)SpawnPoints3.Count - 1f);
-                Door2Floor3.transform.position = SpawnPoints3[id].transform.position;
-                DoorPoint3F2 = Door2Floor3.transform.position;
-                SpawnPoints2.RemoveAt(id);
-            }
-            if (Door3Floor3 != null)
-            {
-                id = (int)Random.Range(0f, (float)SpawnPoints3.Count - 1f);
-                Door3Floor3.transform.position = SpawnPoints3[id].transform.position;
-                DoorPoint3F3 = Door3Floor3.transform.position;
-                SpawnPoints3.RemoveAt(id);
-            }
-            f3 = false;
-        }
-
         if (SceneID == 3 && !f1)
         {
             try
@@ -146,13 +111,6 @@ public class SpawnDoorThing : MonoBehaviour
                 catch { }
             }
             catch {}
-        }
-
-        if (SceneID == 5 && !f3)
-        {
-            Door1Floor3.transform.position = DoorPoint3F1;
-            Door2Floor3.transform.position = DoorPoint3F2;
-            Door3Floor3.transform.position = DoorPoint3F3;
         }
     }
 }

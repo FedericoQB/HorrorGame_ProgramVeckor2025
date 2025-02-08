@@ -35,6 +35,10 @@ public class PlayerHealth : MonoBehaviour
             health = 0f;
             instantDeath = false;
             print("Nah bro, u ded!");
+            PlayerStatsScript.flashlightBatteryProcent = 100;
+            PlayerStatsScript.reserveBattery = 0;
+            HealthBarDamageSprite.SetActive(false);
+            gameObject.GetComponent<PlayerStatsScript>();
             SceneManager.LoadScene(0);
         }
         healthBar.fillAmount = health;

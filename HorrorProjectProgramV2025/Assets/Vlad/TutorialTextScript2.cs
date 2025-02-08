@@ -81,6 +81,11 @@ public class TutorialTextScript2 : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                Player.GetComponent<PlayerStatsScript>().insanityLevel = 1;
+                PlayerStatsScript.flashlightBatteryProcent = 100f;
+                PlayerStatsScript.reserveBattery = 0;
+                Player.GetComponent<PlayerHealth>().health = Player.GetComponent<PlayerHealth>().maxHealth;
+                Player.GetComponent<PlayerHealth>().HealthBarDamageSprite.SetActive(false);
                 SceneManager.LoadScene(0);
             }
         }
