@@ -5621,15 +5621,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2115783996}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b684541656c9f9643ae73744095e532f, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f08f99c0c333e14ea8c6564a7358afe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLocked: 1
-  isOn: 0
-  isInteractableAgain: 0
-  completesQuest: 0
-  newRoom: {fileID: 0}
-  OriginalRoom: {fileID: 0}
+  exitCanvas: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

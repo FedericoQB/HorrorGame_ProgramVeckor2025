@@ -3463,7 +3463,7 @@ MonoBehaviour:
   enemy1: {fileID: 4490547783649853139, guid: 0f27d273d3dd2d44b95270de8fa915fd, type: 3}
   enemy2: {fileID: 451118680651548156, guid: 3d56e372b35680b479230c649dbb8e71, type: 3}
   spawnActive: 1
-  amountOfEnemies: 3
+  amountOfEnemies: 2
 --- !u!1001 &8729891373918661518
 PrefabInstance:
   m_ObjectHideFlags: 0
